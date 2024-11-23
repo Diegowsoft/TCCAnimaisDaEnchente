@@ -12,6 +12,9 @@
     --amarelo:  #fec35d;
     --corFundo: #f6d8a6;
 }
+body{
+    background-color: #f6d8a6;
+}
 .bg-custom {
     background-color: var(--roxo);
 }
