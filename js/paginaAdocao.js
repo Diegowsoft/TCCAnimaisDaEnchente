@@ -29,26 +29,6 @@ let cardData = [
         description: 'Descrição do Card 4',
         image: '../img/chocarro1.jpeg'
     },
-    {
-        title: 'Card 7',
-        description: 'Descrição do Card 4',
-        image: '../img/chocarro1.jpeg'
-    },
-    {
-        title: 'Card 8',
-        description: 'Descrição do Card 4',
-        image: '../img/chocarro1.jpeg'
-    },
-    {
-        title: 'Card 9',
-        description: 'Descrição do Card 4',
-        image: '../img/chocarro1.jpeg'
-    },
-    {
-        title: 'Card 10',
-        description: 'Descrição do Card 4',
-        image: '../img/chocarro1.jpeg'
-    },
 ];
 
 let cardContainer = document.querySelector('.card-container');
