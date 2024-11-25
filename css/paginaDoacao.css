@@ -6,15 +6,18 @@
     padding: 0;
     margin: 0;
 }
+
 :root {
     --roxo: #432473;
     --branco: #faf8f5;
-    --amarelo:  #fec35d;
+    --amarelo: #fec35d;
     --corFundo: #faeec6;
 }
+
 body {
     background-color: var(--corFundo);
 }
+
 .bg-custom {
     background-color: var(--roxo);
 }
@@ -25,26 +28,115 @@ nav {
 
 nav .collapse ul li a:hover {
     text-decoration: underline;
+    cursor: url('../img/tennis.png'), auto;
 }
 
 .logo {
     width: 8rem;
+    cursor: url('../img/tennis.png'), auto;
 }
 
-main{
+main {
     text-align: center;
-    margin-top: 50px;
+    margin: 3%;
 }
-.lar_temporario{
+
+main p {
+    margin: 2%;
+    font-size: 20px;
+
+}
+
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite quebrar linha, se necessário */
+    justify-content: space-around;
+    gap: 20px;
+    /* Espaçamento entre os elementos */
+}
+
+article div {
+    background-color: #faf8f5;
+    flex: 1 1 30%;
+    /* Controla o tamanho de cada div */
+    box-sizing: border-box;
+    /* Garante que padding e border sejam incluídos nas dimensões */
     text-align: center;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.lar_temporario img{
-    width: 15%;
-    height: 15%;
+
+article img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin: 10px auto;
     border-radius: 20%;
-    margin: 20px auto;
-    display: block;
     border: 2px solid #432473;
+}
+
+.lar_temporario {
+    height: 600%;
+    /*div*/
+}
+
+.racao {
+    /*img*/
+    height: 40%;
+    width: 80%;
+}
+
+.titulos,
+.paragrafos {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+.butao {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: 20px auto 0;
+    transition: transform 0.2s;
+    cursor: url('../img/tennis.png'), auto;
+}
+
+.butao:hover {
+    transform: scale(1.1);
+}
+
+
+.voluntarios{
+    height: 150px;
+    background-color: #faf8f5;
+    text-align: center;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2%;
+}
+
+
+.sub-butao, .sub-butao-container{
+    display: inline-block;
+    margin-left: 10px;  
+    vertical-align: middle;  /* Alinha verticalmente ao centro */
+    width: 50px;
+    height: auto;
+    display: inline;
+    transition: transform 0.2s;
+    cursor: url('../img/tennis.png'), auto;
+}
+
+.sub-butao{
+    border: 2px solid #432473;
+    border-radius: 20%;
+}
+
+.sub-butao:hover {
+    transform: scale(1.1);
 }
 
 
@@ -60,12 +152,15 @@ footer .esquerda {
     flex-direction: column;
     justify-content: center;
     margin-left: 20px;
+
 }
 
 footer .esquerda a {
     text-decoration: none;
     color: black;
     font-size: 1.3rem;
+    color: white;
+    cursor: url('../img/tennis.png'), auto;
 }
 
 footer .esquerda a:hover {
@@ -103,6 +198,7 @@ footer .centro p {
     font-size: 1.2rem;
     color: white;
 }
+
 .linksContato {
     display: flex;
     column-gap: 10px;

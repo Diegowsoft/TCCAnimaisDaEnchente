@@ -5,7 +5,7 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
-    background: url(../img/fundoquiz.jpg);
+    background-color: #faeec6;
     display: flex;
     justify-content: center;
     align-items: center;

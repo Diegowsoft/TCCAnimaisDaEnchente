@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuidados</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/paginaDoacao.css">
 
 </head>
@@ -53,38 +53,177 @@
     </header>
     <main>
         <h1>Formas de Contribuir</h1>
-        <p>Se o nosso projeto Animais da Enchente tocou seu coração, saiba que há várias maneiras de nos apoiar! Sua contribuição pode ser feita por meio de:</p>
+        <p>Se o nosso projeto Animais da Enchente tocou seu coração, saiba que há várias maneiras de nos apoiar! Sua
+            contribuição pode ser feita por meio de:</p>
     </main>
 
     <article>
 
         <div class="pix">
-            <h3>PIX</h3>
-            <P>47.437.493/0001-95 - Cnpj</P>
+            <h3 class="titulos">PIX</h3>
+            <img src="..//img/pix.jpg" alt="Pix dog">
+            <P class="paragrafos">Para realizar sua contribuição, você pode utilizar o PIX: 47.437.493/0001-95. Em caso
+                de dúvidas ou se deseja entrar em contato para conversar sobre doações, clique na patinha abaixo.
+                Agradecemos muito pelo seu apoio!
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Quero ajudar!&body=Olá, gostaria de contribuir com doações."
+                    target="_blank" title="Envie um e-mail pelo Gmail">
+                    <img src="../img/patas.png" alt="Pata" class="butao">
+                </a>
+            </P>
         </div>
 
         <div class="lar_temporario">
-            <h3>Seja um lar temporário</h3>
+            <h3 class="titulos">Seja um lar temporário</h3>
             <img src="../img/cao.jpg" alt="Cachorro">
 
-            <p>Seja um lar temporário para um amigo de quatro patas enquanto ele busca uma família definitiva! Basta ter tempo, carinho e dedicação para cuidar dele. (Os custos com alimentação e saúde são cobertos pelo projeto). Quer ajudar? Clique na patinha e entre em contato conosco!</p>
+            <p class="paragrafos">Seja um lar temporário para um amigo de quatro patas enquanto ele busca uma família
+                definitiva! Basta ter tempo, carinho e dedicação para cuidar dele. (Os custos com alimentação e saúde
+                são cobertos pelo projeto). Quer ajudar? Clique na patinha e entre em contato conosco!
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Quero ajudar!&body=Olá, gostaria de contribuir com doações."
+                    target="_blank" title="Envie um e-mail pelo Gmail">
+                    <img src="../img/patas.png" alt="Pata" class="butao">
+                </a>
+            </p>
 
         </div>
 
         <div class="doe_mantimentos">
-            <h3>Contribua com ração, brinquedos ou medicamentos para nossos amigos peludos!</h3>
-            <img src="../img/racao.jpg" alt="Ração">
-            <p>Aceitamos doações de itens essenciais para garantir o bem-estar deles. Para ajudar, clique na patinha e entre em contato conosco!</p>
+            <h3 class="titulos">Contribua com:</h3>
+            <img src="../img/racao.jpg" class="racao" alt="Ração">
+            <p class="paragrafos">
+                Ração, brinquedos, medicamentos e outros itens essenciais que garantem o conforto e a saúde dos animais.
+                Cada gesto faz a diferença na vida desses companheiros que tanto precisam de carinho e cuidados. Para
+                contribuir, basta clicar na patinha abaixo e entrar em contato conosco.
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Quero ajudar!&body=Olá, gostaria de contribuir com doações."
+                    target="_blank" title="Envie um e-mail pelo Gmail">
+                    <img src="../img/patas.png" alt="Pata" class="butao">
+                </a>
+            </p>
         </div>
 
-        <div class="voluntarios">
-            <h3>Seja voluntário e faça a diferença na vida de nossos peludos! </h3>
-            <p>Estamos em busca de pessoas dispostas a doar seu tempo e dedicação para ajudar em diversas atividades. Para mais informações, clique na patinha e preencha o formulário!</p>
-        </div>
     </article>
 
+    <section>
+        <div class="voluntarios">
+            <h3 class="text-center">Seja voluntário e faça a diferença na vida de nossos peludos!</h3>
+            <p class="paragrafo-center">
+                Estamos em busca de pessoas dispostas a doar seu tempo e dedicação para ajudar em diversas atividades. 
+                Para mais informações, clique na patinha e preencha o formulário!
+            </p>
+    
+            <!-- Botão com a patinha que abre o modal -->
+            <div class="voluntarios d-flex justify-content-center">
+                <div class="sub-butao-container" data-bs-toggle="modal" data-bs-target="#formModal">
+                    <img src="../img/patas.png" alt="Pata" class="sub-butao">
+                </div>
+            </div>
+    
+            <!-- Modal/Formulário -->
+            <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="formModalLabel">Formulário de Voluntariado</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="volunteerForm" action="https://api.staticforms.xyz/submit" method="POST">
+                                <label for="email">E-mail:</label>
+                                <input type="email" id="email" name="email" class="form-control" required><br>
+    
+                                <label for="data-nascimento">Data de nascimento:</label>
+                                <input type="date" id="data-nascimento" name="data-nascimento" class="form-control" required><br>
+    
+                                <label for="whatsapp">Seu WhatsApp:</label>
+                                <input type="tel" id="whatsapp" name="whatsapp" class="form-control" placeholder="(11) 90000-000" required><br>
+    
+                                <fieldset>
+                                    <legend>Experiência Voluntária</legend>
+                                    <label>
+                                        <input type="radio" name="experiencia-voluntaria" value="nunca" required>
+                                        Nunca participei de trabalhos voluntários
+                                    </label><br>
+                                    <label>
+                                        <input type="radio" name="experiencia-voluntaria" value="ja-sou">
+                                        Já fui ou sou voluntário
+                                    </label><br>
+                                    <textarea id="experiencia-anterior" name="experiencia-anterior" class="form-control" placeholder="Descreva brevemente suas experiências anteriores"></textarea><br>
+                                </fieldset><br>
+    
+                                <fieldset>
+                                    <legend>Habilidades</legend>
+                                    <label>
+                                        <input type="checkbox" name="habilidades[]" value="veterinario">
+                                        Veterinário
+                                    </label><br>
+                                    <label>
+                                        <input type="checkbox" name="habilidades[]" value="administrativo-financeiro">
+                                        Administrativo/financeiro
+                                    </label><br>
+                                    <label>
+                                        <input type="checkbox" name="habilidades[]" value="captacao-recursos">
+                                        Captação de recursos
+                                    </label><br>
+                                    <label>
+                                        <input type="checkbox" name="habilidades[]" value="marketing">
+                                        Marketing
+                                    </label><br>
+                                    <label>
+                                        <input type="checkbox" name="habilidades[]" value="outro">
+                                        Outro (descrever abaixo)
+                                    </label><br>
+                                    <textarea id="outras-habilidades" name="outras-habilidades" class="form-control" placeholder="Descreva brevemente"></textarea><br>
+                                </fieldset><br>
+    
+                                <fieldset>
+                                    <legend>Área de Interesse</legend>
+                                    <label>
+                                        <input type="radio" name="area-interesse" value="evento-adicao" required>
+                                        Evento de adoção
+                                    </label><br>
+                                    <label>
+                                        <input type="radio" name="area-interesse" value="atuar-dentro-habilidades">
+                                        Atuar dentro das minhas habilidades
+                                    </label><br>
+                                    <label>
+                                        <input type="radio" name="area-interesse" value="outro">
+                                        Outro (descrever abaixo)
+                                    </label><br>
+                                    <textarea id="area-interesse-descricao" name="area-interesse-descricao" class="form-control" placeholder="Descreva sua área de interesse"></textarea><br>
+                                </fieldset><br>
+    
+                                <label for="disponibilidade">Disponibilidade (dia da semana, período, região, cidade, online ou presencial):</label><br>
+                                <textarea id="disponibilidade" name="disponibilidade" class="form-control" required></textarea><br>
+    
+                                <input type="hidden" name="accessKey" value="1d91fb8d-b348-42c9-844b-2e6b96c604f3">
+    
+                                <button type="submit" class="btn btn-success mt-3">Enviar</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    </section>
 
 
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
 
 
@@ -92,8 +231,10 @@
     <footer>
         <div class="esquerda">
             <figure class="linksContato">
-                <a href="https://www.instagram.com/animaisdaenchente_nh/" target="_blank"><img src="../img/instagram.png" alt="instagram"></a>
-                <figcaption><a href="https://www.instagram.com/animaisdaenchente_nh/" target="_blank">instagram</a></figcaption>
+                <a href="https://www.instagram.com/animaisdaenchente_nh/" target="_blank"><img
+                        src="../img/instagram.png" alt="instagram"></a>
+                <figcaption><a href="https://www.instagram.com/animaisdaenchente_nh/" target="_blank">instagram</a>
+                </figcaption>
             </figure>
             <figure class="linksContato">
                 <a href="#" target="_blank"><img src="../img/whatsapp.png" alt="whatsapp"></a>
@@ -120,12 +261,12 @@
     </footer>
 
 
- 
 
 
-   
 
-    
+
+
+
 </body>
 
 </html>
