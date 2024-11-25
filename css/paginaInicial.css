@@ -10,10 +10,11 @@
     --roxo: #432473;
     --branco: #faf8f5;
     --amarelo:  #fec35d;
-    --corFundo: #f6d8a6;
+    --corFundo: #FAEEC6;
 }
 body{
-    background-color: #f6d8a6;
+    background-color: var(--corFundo);
+    scroll-behavior: smooth;
 }
 .bg-custom {
     background-color: var(--roxo);
@@ -32,138 +33,89 @@ nav .collapse ul li a:hover {
 }
 
 /*=============== CARD ===============*/
-.container {
-    display: grid;
-    margin-inline: 1.5rem;
-    padding-block: 5rem;
-  }
-  
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 348px));
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  .card-article {
-    position: relative;
-    background-color: var(--black-color);
-    border: 2px solid var(--gray-color);
-    padding: 3rem 1.5rem 1.5rem;
-    display: grid;
-    row-gap: 1rem;
-    overflow: hidden;
-    transition: background-color .6s;
-  }
-  
-  .card-img {
-    width: 200px;
-    justify-self: center;
-    filter: drop-shadow(0 8px 24px hsla(170, 12%, 8%, .1));
-    transition: transform .4s;
-  }
-  
-  .card-data {
+.area{
+    width: 100%;
+    background-color: var(--corFundo);
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    transition: transform .4s, opacity .4s;
-  }
-  
-  .card-title {
-    font-size: var(--normal-font-size);
-    font-weight: 400;
-  }
-  
-  .card-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os cards que não cabem na linha se movam para a linha seguinte */
+    gap: 40px; /* Espaçamento entre os cards */
+    margin-top: 20px;
+}
+.card{
+    width: 500px;
+    height: 500px;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 7px 7px 7px  rgba(0, 0, 0, 0.5);
+}
+.card img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transform: scale(1.3);
-    z-index: -1;
-    transition: transform .4s;
-  }
-  
-  .card-button {
-    background-color: var(--white-color);
-    padding: .75rem 1rem;
-    color: var(--black-color);
+}
+.card .mask-1{
+    width: 100%;
+    height: 50%;
     display: flex;
     align-items: center;
-    column-gap: .5rem;
-    justify-self: center;
-    box-shadow: 0 8px 24px hsla(170, 12%, 8%, .1);
+    justify-content: center;
     position: absolute;
-    bottom: -1.5rem;
-    opacity: 0;
-    pointer-events: none;
-    transition: transform .4s, opacity .4s;
-  }
-  
-  .card-button i {
-    font-size: 1.25rem;
-    transition: transform .4s;
-  }
-  .card-button:hover i {
-    transform: translateX(.5rem);
-  }
-  
-  /* Animação do Card */
-  .card-article:hover .card-img {
-    transform: translateY(-1.5rem);
-  }
-  
-  .card-article:hover .card-data {
-    transform: translateY(-4.5rem);
-    opacity: 0;
-  }
-  
-  .card-article:hover {
-    background-color: transparent;
-  }
-  
-  .card-article:hover .card-bg {
-    transform: scale(1);
-  }
-  
-  .card-article:hover .card-button {
-    transform: translateY(-3.75rem);
-    opacity: 1;
-    pointer-events: initial;
-  }
-  
-  div article {
-    color: #fff;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.459);
-  }
-  /*=============== BREAKPOINTS ===============*/
-  /* Para dispositivos pequenos */
-  @media screen and (max-width: 300px) {
-    .container {
-      margin-inline: 1rem;
-    }
-  
-    .card-container {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  /* Para dispositivos maiores */
-  @media screen and (min-width: 1120px) {
-    .container {
-      height: 100vh;
-      display: grid;
-      align-items: center;
-    }
-  
-    .card-img {
-      width: 220px;
-    }
-  }
+    top: -100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: all .7s ease;
+}
+.card:hover .mask-1{
+    top: 0;
+}
+.card .mask-1 .border-1{
+    width: 500px;
+    height: 500px;
+    margin-top: 15px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+.card .mask-2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: all .7s ease;
+}
+.card:hover .mask-2{
+    bottom: 0;
+}
+.card .mask-2 .border-2{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+.card .mask-2 .border-2 h1{
+    color: var(--amarelo);
+    margin-top: 100px;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: arial;
+    opacity: 0.6;
+}
+
+@media (min-width:1025px) {
+        /* GUILHERME POR FAVOR CRIE UM MEDIA QUERY PARA OS CARDS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+}
 
 /* ===============SOBRE NÓS=============== */
 
