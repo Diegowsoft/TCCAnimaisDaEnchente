@@ -15,7 +15,7 @@
 }
 
 body {
-    background-color: var(--branco);
+    background-color: var(--corFundo);
 }
 
 .bg-custom {
