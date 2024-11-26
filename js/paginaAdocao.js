@@ -2,52 +2,32 @@ let cardData = [
     {
         title: 'Card 1',
         description: 'Descrição do Card 1',
-        image: '../img/chocarro1.jpeg'
+        image: '../img/dog1.jpeg'
     },
     {
         title: 'Card 2',
         description: 'Descrição do Card 2',
-        image: '../img/chocarro1.jpeg'
+        image: '../img/dog2.jpeg'
     },
     {
         title: 'Card 3',
         description: 'Descrição do Card 3',
-        image: '../img/chocarro1.jpeg'
+        image: '../img/dog3.jpeg'
     },
     {
         title: 'Card 4',
         description: 'Descrição do Card 4',
-        image: '../img/chocarro1.jpeg'
+        image: '../img/dog4.jpeg'
     },
     {
         title: 'Card 5',
         description: 'Descrição do Card 4',
-        image: '../img/chocarro1.jpeg'
+        image: '../img/dog5.jpeg'
     },
     {
         title: 'Card 6',
         description: 'Descrição do Card 4',
-        image: '../img/chocarro1.jpeg'
-    },
-    {
-        title: 'Card 7',
-        description: 'Descrição do Card 4',
-        image: '../img/chocarro1.jpeg'
-    },
-    {
-        title: 'Card 8',
-        description: 'Descrição do Card 4',
-        image: '../img/chocarro1.jpeg'
-    },
-    {
-        title: 'Card 9',
-        description: 'Descrição do Card 4',
-        image: '../img/chocarro1.jpeg'
-    },
-    {
-        title: 'Card 10',
-        description: 'Descrição do Card 4',
-        image: '../img/chocarro1.jpeg'
+        image: '../img/dog6.jpeg'
     },
 ];
 

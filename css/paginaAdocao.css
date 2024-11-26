@@ -48,10 +48,10 @@ nav .collapse ul li a:hover {
 }
 
 .card-container {
-    display: flex;
-    justify-content: space-evenly;
-    justify-self: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    place-self: center;
     gap: 20px;
     max-width: 1250px;
     margin: 0 30px;
@@ -62,9 +62,8 @@ nav .collapse ul li a:hover {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: var(--roxo);
+    background-color: none;
     transition: transform 0.3s ease;
-    padding: 3px;
 }
 
 .card img {
@@ -87,11 +86,59 @@ nav .collapse ul li a:hover {
     align-items: center;
     text-align: center;
     transition: opacity 0.3s ease;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card:hover .overlay {
     opacity: 1;
 }
+
+.vermais {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    width: 6em;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 17px;
+    z-index: 1;
+    color: var(--amarelo);
+    border: 2px solid var(--amarelo);
+    border-radius: 6px;
+    position: relative;
+  }
+  
+  .vermais::before {
+    position: absolute;
+    content: "";
+    background: var(--amarelo);
+    width: 150px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+  }
+  
+  .vermais:hover {
+    color: white;
+  }
+  
+  .vermais:before {
+    top: 100%;
+    left: 100%;
+    transition: 0.3s all;
+  }
+  
+  .vermais:hover::before {
+    top: -30px;
+    left: -30px;
+  }
 
 /* ================FOOTER================ */
 
@@ -103,25 +150,106 @@ footer {
     margin-top: 50px; /* Retirar depois */
 }
 
-footer .esquerda {
+.esquerda {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
-footer .esquerda a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.3rem;
+.insta {
+   background-color: #fff;
+   border: 1px solid #D237A1;
+   padding: 5px;
+   position: relative;
+   width: 7.2em;
+   height: 2em;
+   transition: 0.5s;
+   font-size: 17px;
+   border-radius: 0.4em;
+   margin-bottom: 15px;
+}
+  
+.insta p {
+   position: absolute;
+   top: 0.2em;
+   left: 1.8em;
+   margin: 0;
+   padding: 0;
+   transition: .5s;
+   color: #D237A1;
+}
+  
+.insta svg {
+   position: absolute;
+   top: 0.45em;
+   right: 0.5em;
+   margin: 0;
+   padding: 0;
+   opacity: 0;
+   transition: 0.5s;
+   height: 1em;
+   fill: #fff
+}
+  
+.insta:hover p {
+   left: 0.8em;
+   color: #fff
+}
+  
+.insta:hover svg {
+  opacity: 1;
+}
+  
+.insta:hover {
+   background-color: #D237A1;
 }
 
-footer .esquerda a:hover {
-    text-decoration: underline;
+.whats {
+   background-color: #fff;
+   border: 1px solid #25D366;
+   padding: 5px;
+   position: relative;
+   width: 7.2em;
+   height: 2em;
+   transition: 0.5s;
+   font-size: 17px;
+   border-radius: 0.4em;
 }
-
-footer .esquerda img {
-    height: 30px;
+  
+.whats p {
+   position: absolute;
+   top: 0.2em;
+   left: 1.6em;
+   margin: 0;
+   padding: 0;
+   transition: .5s;
+   color: #25D366;
+}
+  
+.whats svg {
+   position: absolute;
+   top: 0.45em;
+   right: 0.5em;
+   margin: 0;
+   padding: 0;
+   opacity: 0;
+   transition: 0.5s;
+   height: 1em;
+   fill: #fff
+}
+  
+.whats:hover p {
+   left: 0.8em;
+   color: #fff
+}
+  
+.whats:hover svg {
+   opacity: 1;
+}
+  
+.whats:hover {
+   background-color: #25D366;
 }
 
 footer .direita {

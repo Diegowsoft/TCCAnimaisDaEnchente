@@ -17,7 +17,7 @@ const questions = [
             { text: "Fico ao lado dele, oferecendo minha companhia até que ele se sinta à vontade para falar.", answer: "d"}
         ]
     },
-    // Adicione as outras perguntas aqui de forma semelhante
+    
     {
         question: "Qual é o comportamento mais importante em um cachorro?",
         options: [
@@ -27,7 +27,7 @@ const questions = [
             { text: "Proteção", answer: "d"}
         ]
     },
-    // Continue adicionando todas as perguntas da mesma forma...
+    
     {
         question: "Onde você gostaria de passar as férias?",
         options: [
@@ -50,7 +50,7 @@ const questions = [
 ];
 
 let currentQuestionIndex = 0;
-let answerTally = { a: 0, b: 0, c: 0 };
+let answerTally = { a: 0, b: 0, c: 0, d: 0, e: 0 };
 
 document.addEventListener("DOMContentLoaded", () => {
     const questionElement = document.querySelector(".question");
@@ -59,12 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const questionCard = document.getElementById("question-card");
     const resultArea = document.getElementById("result-area");
     const resultImage = document.getElementById("result-image");
-    const restartButton = document.getElementById("restart");
 
-    function loadQuestion(quizpag) {
-        const currentQuestion = questions[quizpag];
+    function loadQuestion(index) {
+        const currentQuestion = questions[index];
         questionElement.textContent = currentQuestion.question;
         optionsElement.innerHTML = "";
+
         currentQuestion.options.forEach(option => {
             const div = document.createElement("div");
             div.className = "option";
@@ -76,9 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function handleAnswer(event) {
-        const selectedOption = event.target;
-        const answer = selectedOption.getAttribute("data-answer");
-
+        const answer = event.target.getAttribute("data-answer");
         answerTally[answer]++;
 
         currentQuestionIndex++;
@@ -90,51 +88,59 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function showResult() {
-        const mostFrequentAnswer = Object.keys(answerTally).reduce((a, b) => answerTally[a] > answerTally[b] ? a : b);
+        const mostFrequentAnswer = Object.keys(answerTally).reduce((a, b) => 
+            answerTally[a] > answerTally[b] ? a : b
+        );
 
         let result = {
             area: "",
-            image: ""
+            image: "",
+            extraImages: []
         };
 
         switch (mostFrequentAnswer) {
             case "a":
                 result.area = "Calma e Tranquilo";
                 result.image = "../img/calmo.jpg";
+                result.extraImages = ["../img/dog1.jpeg", "../img/dog2.jpeg", "../img/dog3.jpeg"];
                 break;
             case "b":
                 result.area = "Amoroso";
                 result.image = "../img/amoroso.jpg";
+                result.extraImages = ["../img/cachorro4.jpg", "../img/cachorro5.jpg", "../img/cachorro6.jpg"];
                 break;
             case "c":
-                result.area = " Aventureira";
+                result.area = "Aventureiro";
                 result.image = "../img/aventura.jpg";
+                result.extraImages = ["../img/cachorro7.jpg", "../img/cachorro8.jpg", "../img/cachorro9.jpg"];
                 break;
             case "d":
                 result.area = "Protetor";
                 result.image = "../img/protetor.jpg";
+                result.extraImages = ["../img/cachorro10.jpg", "../img/cachorro11.jpg", "../img/cachorro12.jpg"];
                 break;
             case "e":
                 result.area = "Reservado";
                 result.image = "../img/reservado.jpg";
+                result.extraImages = ["../img/cachorro13.jpg", "../img/cachorro14.jpg", "../img/cachorro15.jpg"];
                 break;
         }
 
-        // Exibe a área de correspondência e a imagem associada
         resultArea.textContent = result.area;
-        resultImage.src =result.image;
+        resultImage.src = result.image;
+
+        const extraImagesContainer = document.getElementById("extra-images");
+        extraImagesContainer.innerHTML = "";
+        result.extraImages.forEach(imgSrc => {
+            const imgElement = document.createElement("img");
+            imgElement.src = imgSrc;
+            extraImagesContainer.appendChild(imgElement);
+        });
 
         questionCard.classList.add("hidden");
         resultCard.classList.remove("hidden");
     }
 
-    restartButton.addEventListener("click", () => {
-        questionCard.classList.remove("hidden");
-        resultCard.classList.add("hidden");
-        currentQuestionIndex = 0;
-        answerTally = { a: 0, b: 0, c: 0};
-        loadQuestion(currentQuestionIndex);
-    });
-
     loadQuestion(currentQuestionIndex);
 });
+

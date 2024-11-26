@@ -38,11 +38,14 @@ body, html {
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
+
+
 h3 {
     font-family: 'Courgette', cursive;
     font-size: 2rem;
     color: #432473;
-    margin-bottom: 20px;
+    margin-bottom: 3px;
+    text-align: center;
 }
 
 .hidden {
@@ -63,7 +66,6 @@ h3 {
     padding: 15px;
     border-radius: 30px;
     text-align: center;
-    cursor: url('../img/tennis.png'), auto;
     transition: background-color 0.2s ease;
     font-size: 18px;
 }
@@ -81,7 +83,7 @@ h3 {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    margin: 20px auto;
+    margin: 10px auto;
     display: block;
     border: 2px solid #432473;
 }
@@ -91,7 +93,29 @@ h3 {
     font-weight: bold;
     color: #333;
     margin-top: 10px;
+        
 }
+.extra-images {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.extra-images img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; 
+}
+
+.extra-images img:hover {
+    transform: scale(4.2); 
+}
+
 
 #restart {
     margin-top: 20px;
@@ -101,7 +125,6 @@ h3 {
     border: none;
     border-radius: 30px;
     font-size: 18px;
-    cursor: url('../img/tennis.png'), auto;
     transition: background-color 0.2s ease;
     width: 80%;
 }
@@ -110,10 +133,10 @@ h3 {
     background-color:  #7957ac;
 }
 
-/* .logo-img {
-    max-width: 100px;
-    margin-bottom: 20px;
-} */
+.logo-img {
+    max-width: 150px;
+    margin-bottom: 20px;}
+
 
 .alink{
     color: #fff;
@@ -125,7 +148,6 @@ h3 {
     padding: 15px;
     border-radius: 30px;
     font-size: 18px;
-    cursor: url('../img/tennis.png'), auto;
     margin-top: 20px;
     text-align: center;
     transition: background-color 0.2s ease;

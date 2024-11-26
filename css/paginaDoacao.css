@@ -48,13 +48,10 @@ main p {
 }
 
 
-article {
+#cards {
     display: flex;
-    flex-wrap: wrap;
-    /* Permite quebrar linha, se necessário */
-    justify-content: space-around;
+    margin: 0 40px;
     gap: 20px;
-    /* Espaçamento entre os elementos */
 }
 
 article div {
@@ -65,7 +62,7 @@ article div {
     /* Garante que padding e border sejam incluídos nas dimensões */
     text-align: center;
     border-radius: 10%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
 }
 
 article img {
@@ -90,8 +87,7 @@ article img {
 
 .titulos,
 .paragrafos {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin: 5% 10px;
 }
 
 
@@ -113,11 +109,14 @@ article img {
     height: 150px;
     background-color: #faf8f5;
     text-align: center;
-    border-radius: 10%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 2%;
+    margin-bottom: 50px;
 }
 
+.voluntariotxt {
+    padding-top: 10px;
+}
 
 .sub-butao, .sub-butao-container{
     display: inline-block;  
