@@ -10,10 +10,10 @@
     --roxo: #432473;
     --branco: #faf8f5;
     --amarelo:  #fec35d;
-    --corFundo: #f6d8a6;
+    --corFundo: #FAEEC6;
 }
 body{
-    background-color: #f6d8a6;
+    background-color: var(--corFundo);
 }
 .bg-custom {
     background-color: var(--roxo);
