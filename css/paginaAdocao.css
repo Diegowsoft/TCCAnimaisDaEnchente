@@ -143,18 +143,50 @@ nav .collapse ul li a:hover {
 /* ================FOOTER================ */
 
 footer {
+    min-height: 15vh;
+    width: 100%;
     background-color: var(--roxo);
-    min-height: 20vh;
     display: flex;
-    justify-content: space-between;
-    margin-top: 50px; /* Retirar depois */
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.esquerda {
+.linksnav {
     display: flex;
     flex-direction: column;
+    width: 250px;
+    align-items: center;
+}
+
+.linksnav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1.15rem;
+}
+
+.linksnav a:hover {
+    text-decoration: underline;
+}
+
+footer figure img {
+    height: 200px;
+}
+
+.botao-contato .txt {
+    color: var(--branco);
+    font-size: 1.15rem;
+}
+
+.botao-contato {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 250px;
+}
+
+.botao-contato a {
+    display: flex;
     justify-content: center;
-    margin-left: 10px;
 }
 
 .insta {
@@ -250,37 +282,4 @@ footer {
   
 .whats:hover {
    background-color: #25D366;
-}
-
-footer .direita {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 1.3rem;
-    margin-right: 20px;
-}
-
-footer .direita ol li {
-    list-style: none;
-    text-align: center;
-    color: white;
-}
-
-footer .centro img {
-    height: 125px;
-}
-
-footer .centro {
-    text-align: center;
-}
-
-footer .centro p {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: white;
-}
-
-.linksContato {
-    display: flex;
-    column-gap: 10px;
 }
