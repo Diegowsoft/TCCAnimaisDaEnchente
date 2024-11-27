@@ -121,6 +121,9 @@ nav .collapse ul li a:hover {
 main {
     padding-bottom: 80px;
 }
+h2 span {
+    color: var(--amarelo);
+}
 
 .sobrenos img{
     width: 550px;
@@ -133,6 +136,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: black;
 }
 .sobrenos p {
     width: 400px;
@@ -145,7 +149,7 @@ main {
 /* ===============PORQUE ADOTAR=============== */
 
 h2{
-    color:#fec35d;
+    color:black;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     align-items : initial;
     text-align: center;
