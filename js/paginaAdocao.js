@@ -2,7 +2,7 @@ let cardData = [
     {
         title: 'Thor',
         description: 'Thor é extremamente enérgico e brincalhão. Ele adora explorar o ambiente e se movimentar bastante, sempre pronto para correr e brincar. Ao mesmo tempo, é protetor e leal, mostrando carinho e confiança para aqueles que cuidam dele.',
-        image: '../img/dog1.jpeg'
+        image: '../img/dog1.jpeg',
     },
     {
         title: 'Daisy',
@@ -78,6 +78,12 @@ function createCards(data) {
         overlay.innerHTML = `
             <h3>${item.title}</h3>
             <p>${item.description}</p>
+            <button class="btn-redirect">
+                <img src="../img/mao (2).png" alt="Button 1">
+            </button>
+            <button class="btn-redirect">
+                <img src="../img/patas.png" alt="Button 2">
+            </button>
         `;
 
         // Adicionando a imagem e o overlay ao card
