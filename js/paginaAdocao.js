@@ -1,33 +1,63 @@
 let cardData = [
     {
-        title: 'Card 1',
-        description: 'Descrição do Card 1',
+        title: 'Thor',
+        description: 'Thor é extremamente enérgico e brincalhão. Ele adora explorar o ambiente e se movimentar bastante, sempre pronto para correr e brincar. Ao mesmo tempo, é protetor e leal, mostrando carinho e confiança para aqueles que cuidam dele.',
         image: '../img/dog1.jpeg'
     },
     {
-        title: 'Card 2',
-        description: 'Descrição do Card 2',
+        title: 'Daisy',
+        description: 'Uma fonte inesgotável de energia e diversão, adora interagir com brincadeiras que deixam todos felizes.',
         image: '../img/dog2.jpeg'
     },
     {
-        title: 'Card 3',
-        description: 'Descrição do Card 3',
+        title: 'Simba',
+        description: 'Sempre calmo e protetor, é aquele companheiro que transmite segurança e amor ao mesmo tempo.',
         image: '../img/dog3.jpeg'
     },
     {
-        title: 'Card 4',
-        description: 'Descrição do Card 4',
+        title: 'Chico',
+        description: 'Chico é o mais animado e extrovertido. Ele é extremamente brincalhão, adora pular e chamar a atenção para interagir. Além disso, é muito carinhoso e gosta de receber abraços e cafunés, tornando-se um excelente companheiro para momentos de diversão e afeto.',
         image: '../img/dog4.jpeg'
     },
     {
-        title: 'Card 5',
-        description: 'Descrição do Card 4',
+        title: 'Bella',
+        description: 'Bella: Cheia de energia e vitalidade, adora interagir e transmitir alegria com sua presença contagiante.',
         image: '../img/dog5.jpeg'
     },
     {
-        title: 'Card 6',
-        description: 'Descrição do Card 4',
+        title: 'Pretinha',
+        description: ' Pretinha: é a  mais carinhosa e companheira do grupo. Apesar de pequeno, ele tem energia de sobra para brincar e se divertir, sempre com o rabinho abanando. Ela gosta de atenção e está sempre por perto, pedindo carinho e espalhando alegria.',
         image: '../img/dog6.jpeg'
+    },
+    {
+        title: 'Teddy',
+        description: ' Teddy é um cão sereno e doce, que valoriza momentos de calma e proximidade. Ele é carinhoso e tem uma personalidade acolhedora, gostando de estar ao lado das pessoas que ama. Apesar de ser tranquilo, ele também aprecia momentos de brincadeira com quem confia.',
+        image: '../img/dog7.jpeg'
+    },
+    {
+        title: 'Bob',
+        description: ' Bob: Curioso e esperto, está sempre pronto para descobrir algo novo e compartilhar momentos divertidos.',
+        image: '../img/dog8.jpeg'
+    },
+    {
+        title: 'Max',
+        description: ' Max é calmo e sereno, mas também tem seu lado brincalhão. Ele gosta de momentos tranquilos, mas nunca perde a chance de interagir com quem ama',
+        image: '../img/dog9.jpeg'
+    },
+    {
+        title: 'Pipoca',
+        description: ' Pipoca: Apesar de ser cheia de personalidade, não resiste a um carinho e adora se sentir amada, trazendo sempre um toque especial ao ambiente.',
+        image: '../img/dog10.jpeg'
+    },
+    {
+        title: 'Marley',
+        description: 'Marley: Brilhante e cheio de vivacidade, adora aprender coisas novas e estar envolvido em momentos alegres.',
+        image: '../img/dog11.jpeg'
+    },
+    {
+        title: 'Nina',
+        description: ' Nina: Com seu jeito curioso e brincalhão, ama explorar e criar momentos de diversão para todos ao redor.',
+        image: '../img/dog12.jpeg'
     },
 ];
 

@@ -119,8 +119,7 @@ article img {
 }
 
 .sub-butao, .sub-butao-container{
-    display: inline-block;
-    margin-left: 10px;  
+    display: inline-block;  
     vertical-align: middle;  /* Alinha verticalmente ao centro */
     width: 50px;
     height: auto;
