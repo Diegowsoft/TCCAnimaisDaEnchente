@@ -1,0 +1,341 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&family=Roboto:wght@100..900&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --roxo: #432473;
+    --branco: #faf8f5;
+    --amarelo: #fec35d;
+    --corFundo: #FAEEC6;
+    --cinza-claro: #e0e0e0;
+    --cinza-escuro: #4a4a4a;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--corFundo);
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+}
+
+/* Header (Navbar) */
+body {
+    background-color: var(--corFundo);
+}
+
+
+.bg-custom {
+    background-color: var(--roxo);
+}
+
+nav {
+    font-size: 1.75rem;
+}
+
+nav .collapse ul li a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    width: 8rem;
+}
+
+/* Estilizacao geral */
+h1, h2, p {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--roxo);
+    color: var(--branco);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: var(--amarelo);
+    color: var(--roxo);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.hero .btn:hover {
+    background-color: var(--roxo);
+    color: var(--amarelo);
+}
+
+/* Search Section */
+.search {
+    text-align: center;
+    padding: 40px 0;
+}
+.search h2 {
+    color: var(--roxo);
+    /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); */
+}
+.search .amarelo {
+    color: var(--amarelo);
+}
+
+.search input {
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--cinza-claro);
+}
+
+.search button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--roxo);
+    color: var(--branco);
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.search button:hover {
+    background-color: var(--amarelo);
+    color: var(--roxo);
+}
+
+/* Cards Section */
+.cards {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.cards h2 {
+    color: var(--roxo);
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: var(--cinza-claro);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card .overlay h3 {
+    font-size: 1.5rem;
+}
+
+.card .overlay p {
+    font-size: 1rem;
+}
+
+.vermais {
+    background-color: var(--amarelo);
+    color: var(--roxo);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 30px;
+}
+
+.vermais:hover {
+    background-color: var(--roxo);
+    color: var(--amarelo);
+}
+
+/* Estilo para a seção "Marcas que fazem a diferença" */
+.marcas-diferenca {
+    text-align: center;
+    padding: 40px 0;
+    background-color: var(--roxo);
+}
+
+.marcas-diferenca h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--amarelo);
+}
+
+.marcas-diferenca p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: var(--branco);
+}
+
+/* Estilo para o marquee */
+.marquee {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    overflow: hidden; /* Impede que o conteúdo ultrapasse os limites do container */
+    background-color: var(--azul-escuro); /* Fundo escuro para destacar as imagens */
+}
+
+.marquee-container {
+    display: flex;
+    flex: 0 0 auto;
+    animation: marquee 30s linear infinite; /* Animação contínua sem pausas */
+}
+
+.marquee img {
+    width: 200px; /* Ajuste o tamanho das imagens para que fiquem visíveis */
+    height: auto;
+    transition: transform 0.3s ease;
+    margin-right: 20px; /* Espaçamento entre as imagens */
+}
+
+.marquee img:hover {
+    transform: scale(1.1); /* Aumenta um pouco o tamanho da imagem ao passar o mouse */
+}
+
+/* Animação contínua do marquee */
+@keyframes marquee {
+    0% {
+        transform: translateX(0); /* Início na posição normal */
+    }
+    100% {
+        transform: translateX(-100%); /* Move as imagens para a esquerda até desaparecerem completamente */
+    }
+}
+
+
+
+/* Form Section */
+#form {
+    background-color: var(--branco);
+    padding: 40px 0;
+    text-align: center;
+}
+#form h2 {
+    color: var(--roxo);
+}
+.contact-form {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+.contact-form input {
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid var(--cinza-claro);
+}
+
+.contact-form button {
+    background-color: var(--roxo);
+    color: var(--branco);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: var(--amarelo);
+    color: var(--roxo);
+}
+
+/* ================FOOTER================ */
+
+footer {
+    min-height: 15vh;
+    width: 100%;
+    background-color: var(--roxo);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.linksnav {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    align-items: center;
+}
+
+.linksnav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.linksnav a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+footer figure img {
+    height: 150px;
+}
+
+.botao-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.botao-contato img {
+    height: 50px;
+    
+}
+
+.botao-contato button {
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    border-radius: 50%;
+}
+
+.botao-contato button:hover {
+    transform: scale(1.2);
+    transition: ease-in-out 0.3s;
+}
