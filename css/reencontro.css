@@ -50,7 +50,9 @@ nav .collapse ul li a:hover {
 /* Estilizacao geral */
 h1, h2, p {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-
+}
+.amarelo {
+    color: var(--amarelo);
 }
 
 /* Hero Section */
@@ -81,8 +83,8 @@ h1, h2, p {
 }
 
 .hero .btn:hover {
-    background-color: var(--roxo);
-    color: var(--amarelo);
+    background-color: #ffe3b5;
+    color: var(--roxo);
 }
 
 /* Search Section */
@@ -136,12 +138,13 @@ h1, h2, p {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap; /* Para melhor adaptação em telas menores */
 }
 
 .card {
     position: relative;
     width: 300px;
-    height: 300px;
+    height: auto; /* Permitir altura dinâmica */
     background-color: var(--cinza-claro);
     border-radius: 8px;
     overflow: hidden;
@@ -149,13 +152,13 @@ h1, h2, p {
 
 .card video {
     width: 100%;
-    height: 100%;
+    height: auto; /* Manter a proporção do vídeo */
     object-fit: cover;
 }
 
 .card .overlay {
     position: absolute;
-    bottom: 10px;
+    bottom: 55px;
     left: 10px;
     right: 10px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -173,19 +176,65 @@ h1, h2, p {
 }
 
 .vermais {
-    background-color: var(--amarelo);
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    width: 6em;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 17px;
+    z-index: 1;
     color: var(--roxo);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-top: 30px;
+    border: 2px solid var(--roxo);
+    border-radius: 6px;
+    position: relative;
+}
+
+.vermais::before {
+    position: absolute;
+    content: "";
+    background: #8354C9;
+    width: 150px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
 }
 
 .vermais:hover {
-    background-color: var(--roxo);
-    color: var(--amarelo);
+    color: white;
 }
+
+.vermais:before {
+    top: 100%;
+    left: 100%;
+    transition: 0.3s all;
+}
+
+.vermais:hover::before {
+    top: -30px;
+    left: -30px;
+}
+
+/* Responsividade para dispositivos até 768px */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Exibir cards em coluna */
+        gap: 30px; /* Espaçamento maior entre os cards */
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Ocupar quase toda a largura da tela */
+    }
+
+    .card video {
+        height: auto; /* Manter a proporção */
+    }
+}
+
 
 /* Estilo para a seção "Marcas que fazem a diferença" */
 .marcas-diferenca {
@@ -251,6 +300,7 @@ h1, h2, p {
 }
 #form h2 {
     color: var(--roxo);
+    margin-bottom: 35px;
 }
 .contact-form {
     display: grid;
@@ -263,20 +313,6 @@ h1, h2, p {
     width: 50%;
     border-radius: 5px;
     border: 1px solid var(--cinza-claro);
-}
-
-.contact-form button {
-    background-color: var(--roxo);
-    color: var(--branco);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.contact-form button:hover {
-    background-color: var(--amarelo);
-    color: var(--roxo);
 }
 
 /* ================FOOTER================ */
