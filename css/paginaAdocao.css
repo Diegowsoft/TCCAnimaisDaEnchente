@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: var(--corFundo);
+    background-color: var(--branco);
 }
 
 
@@ -48,13 +48,19 @@ nav .collapse ul li a:hover {
 }
 
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    place-self: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
     gap: 20px;
-    max-width: 1250px;
+    place-self: center;
+    max-width: 1100px;
     margin: 0 30px;
+    height: 735px;
+}
+
+.card-container.show-more {
+    height: auto;
 }
 
 .card {
@@ -98,7 +104,14 @@ nav .collapse ul li a:hover {
 }
 
 .card .overlay button img {
-    height: 50px;
+    height: 30px;
+}
+
+.card .overlay button {
+    border: none;
+    border-radius: 50%;
+    padding: 3px;
+    background-color: var(--amarelo);
 }
 
 .vermais {
@@ -113,36 +126,95 @@ nav .collapse ul li a:hover {
     margin: 20px;
     font-size: 17px;
     z-index: 1;
-    color: var(--amarelo);
-    border: 2px solid var(--amarelo);
+    color: var(--roxo);
+    border: 2px solid var(--roxo);
     border-radius: 6px;
     position: relative;
-  }
+}
   
-  .vermais::before {
+.vermais::before {
     position: absolute;
     content: "";
-    background: var(--amarelo);
+    background: #8354C9;
     width: 150px;
     height: 200px;
     z-index: -1;
     border-radius: 50%;
-  }
+}
   
-  .vermais:hover {
+.vermais:hover {
     color: white;
-  }
+}
   
-  .vermais:before {
+.vermais:before {
     top: 100%;
     left: 100%;
     transition: 0.3s all;
-  }
+}
   
-  .vermais:hover::before {
+.vermais:hover::before {
     top: -30px;
     left: -30px;
-  }
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: flex-end;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+  
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+  
+.svgIcon path {
+    fill: white;
+}
+  
+.button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(20, 20, 20);
+    align-items: center;
+}
+  
+.button:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+}
+  
+.button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Voltar ao topo";
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+}
+  
+.button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+}  
 
 /* ================FOOTER================ */
 
@@ -158,7 +230,8 @@ footer {
 .linksnav {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    margin: 10px 0;
+    width: 300px;
     align-items: center;
 }
 
@@ -178,27 +251,35 @@ footer figure img {
     height: 150px;
 }
 
-.botao-contato {
+#contatos {
+    width: 300px;
+}
+
+#contatos p {
+    color: var(--branco);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 200px;
+    justify-content: center;
 }
 
-.botao-contato img {
+#contatos .botao-contato {
+    display: flex;
+    justify-content: center;
+}
+
+#contatos .botao-contato img {
     height: 50px;
-    
 }
 
-.botao-contato button {
+#contatos .botao-contato button {
     border: none;
     background-color: transparent;
     padding: 10px;
     display: flex;
     border-radius: 50%;
+    transition: all ease-in-out 0.3s;
 }
 
-.botao-contato button:hover {
+#contatos .botao-contato button:hover {
     transform: scale(1.2);
-    transition: ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
 }
