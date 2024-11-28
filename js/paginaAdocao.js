@@ -78,12 +78,14 @@ function createCards(data) {
         overlay.innerHTML = `
             <h3>${item.title}</h3>
             <p>${item.description}</p>
-            <button class="btn-redirect">
-                <img src="../img/mao (2).png" alt="Button 1">
-            </button>
-            <button class="btn-redirect">
-                <img src="../img/patas.png" alt="Button 2">
-            </button>
+            <div>
+                <button class="btn-redirect">
+                    <img src="../img/patas.png" alt="Button 2">
+                </button>
+                <button class="btn-redirect">
+                    <img src="../img/mao (2).png" alt="Button 1">
+                </button>
+            </div>
         `;
 
         // Adicionando a imagem e o overlay ao card
@@ -97,3 +99,15 @@ function createCards(data) {
 
 // Criar os cards ao carregar a página
 createCards(cardData);
+
+const readMoreBtn = document.querySelector(".vermais")
+
+
+readMoreBtn.addEventListener("click", (e) => {
+    cardContainer.classList.toggle("show-more");
+    if (readMoreBtn.innerText === "Ver Mais") {
+        readMoreBtn.innerText = "Ver Menos";
+    } else {
+        readMoreBtn.innerText = "Ver Mais";
+    }
+});
