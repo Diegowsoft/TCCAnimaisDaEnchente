@@ -40,16 +40,15 @@ main {
     padding-bottom: 80px;
 }
 /*=============== CARD ===============*/
-.cards-container{
+.cards-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px; 
     flex-wrap: wrap; 
     padding: 20px;
-    font-family:Roboto;
+    font-family: Roboto;
 }
-
 
 .card {
     border: 1px solid #ccc;
@@ -60,20 +59,24 @@ main {
     text-align: center;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
     margin-top: 30px;
+    overflow: hidden; /* Impede que o conteúdo ultrapasse os limites do card */
+}
+
+.card-image {
+    position: relative;
+    overflow: hidden; /* Garante que a imagem não ultrapasse a área do card */
 }
 
 .card-image img {
     width: 100%; 
     height: auto;
     border-radius: 8px; 
-    transition: transform 0.3s ease; 
+    transition: transform 0.1s ease; 
 }
 
-.card-image img:hover{
-    transform: scale(1.1);
+.card-image img:hover {
+    transform: scale(1.1); /* Zoom da imagem */
 }
-
-
 
 .card-titulo {
     margin: 8px 0 4px;
@@ -87,11 +90,9 @@ main {
     color: #555;
 }
 
-
 .add-to-cart {
     padding: 8px 16px;
-    background-color: var(--amarelo
-    );
+    background-color: var(--amarelo);
     color: white;
     border: none;
     border-radius: 4px;
@@ -100,13 +101,14 @@ main {
 }
 
 .add-to-cart:hover {
-    background-color:#f9d089 ;
+    background-color: #f9d089;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
+
 
 
 @media (min-width:1025px) {
