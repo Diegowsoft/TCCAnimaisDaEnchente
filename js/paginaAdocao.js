@@ -26,27 +26,27 @@ let cardData = [
     },
     {
         title: 'Pretinha',
-        description: ' Pretinha: é a  mais carinhosa e companheira do grupo. Apesar de pequeno, ele tem energia de sobra para brincar e se divertir, sempre com o rabinho abanando. Ela gosta de atenção e está sempre por perto, pedindo carinho e espalhando alegria.',
+        description: 'Pretinha: é a mais carinhosa e companheira do grupo. Apesar de pequeno, ela tem energia de sobra para brincar e se divertir, sempre com o rabinho abanando. Ela gosta de atenção e está sempre por perto, pedindo carinho e espalhando alegria.',
         image: '../img/dog6.jpeg'
     },
     {
         title: 'Teddy',
-        description: ' Teddy é um cão sereno e doce, que valoriza momentos de calma e proximidade. Ele é carinhoso e tem uma personalidade acolhedora, gostando de estar ao lado das pessoas que ama. Apesar de ser tranquilo, ele também aprecia momentos de brincadeira com quem confia.',
+        description: 'Teddy é um cão sereno e doce, que valoriza momentos de calma e proximidade. Ele é carinhoso e tem uma personalidade acolhedora, gostando de estar ao lado das pessoas que ama. Apesar de ser tranquilo, ele também aprecia momentos de brincadeira com quem confia.',
         image: '../img/dog7.jpeg'
     },
     {
         title: 'Bob',
-        description: ' Bob: Curioso e esperto, está sempre pronto para descobrir algo novo e compartilhar momentos divertidos.',
+        description: 'Bob: Curioso e esperto, está sempre pronto para descobrir algo novo e compartilhar momentos divertidos.',
         image: '../img/dog8.jpeg'
     },
     {
         title: 'Max',
-        description: ' Max é calmo e sereno, mas também tem seu lado brincalhão. Ele gosta de momentos tranquilos, mas nunca perde a chance de interagir com quem ama',
+        description: 'Max é calmo e sereno, mas também tem seu lado brincalhão. Ele gosta de momentos tranquilos, mas nunca perde a chance de interagir com quem ama.',
         image: '../img/dog9.jpeg'
     },
     {
         title: 'Pipoca',
-        description: ' Pipoca: Apesar de ser cheia de personalidade, não resiste a um carinho e adora se sentir amada, trazendo sempre um toque especial ao ambiente.',
+        description: 'Pipoca: Apesar de ser cheia de personalidade, não resiste a um carinho e adora se sentir amada, trazendo sempre um toque especial ao ambiente.',
         image: '../img/dog10.jpeg'
     },
     {
@@ -56,7 +56,7 @@ let cardData = [
     },
     {
         title: 'Nina',
-        description: ' Nina: Com seu jeito curioso e brincalhão, ama explorar e criar momentos de diversão para todos ao redor.',
+        description: 'Nina: Com seu jeito curioso e brincalhão, ama explorar e criar momentos de diversão para todos ao redor.',
         image: '../img/dog12.jpeg'
     },
 ];
@@ -100,9 +100,40 @@ function createCards(data) {
 // Criar os cards ao carregar a página
 createCards(cardData);
 
-const readMoreBtn = document.querySelector(".vermais")
+const readMoreBtn = document.querySelector(".vermais");
+const searchInput = document.getElementById('searchInput');
+const noResultsMessage = document.getElementById('noResultsMessage');
 
+// Função para filtrar e exibir os cards com base no nome
+function filterCards() {
+    const query = searchInput.value.toLowerCase(); // Obtém o valor da busca em minúsculas
+    let filteredData = cardData.filter(item => 
+        item.title.toLowerCase().includes(query)
+    );
+    
+    // Limpa o conteúdo dos cards antes de atualizar
+    cardContainer.innerHTML = '';
+    
+    // Se não houver resultados, exibe a mensagem e não cria os cards
+    if (filteredData.length === 0) {
+        noResultsMessage.style.display = 'block';
+    } else {
+        noResultsMessage.style.display = 'none';
+        createCards(filteredData); // Cria os cards filtrados
+    }
 
+    // Controla a visibilidade do botão "Ver Mais"
+    if (filteredData.length <= 6) {
+        readMoreBtn.style.display = 'none'; // Esconde o botão se houver 6 ou menos cards
+    } else {
+        readMoreBtn.style.display = 'block'; // Mostra o botão se houver mais de 6 cards
+    }
+}
+
+// Adiciona o evento de digitação no campo de busca
+searchInput.addEventListener('input', filterCards);
+
+// Função para alternar o "Ver Mais"
 readMoreBtn.addEventListener("click", (e) => {
     cardContainer.classList.toggle("show-more");
     if (readMoreBtn.innerText === "Ver Mais") {
