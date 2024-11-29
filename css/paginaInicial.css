@@ -65,6 +65,7 @@ main {
 .card-image {
     position: relative;
     overflow: hidden; /* Garante que a imagem não ultrapasse a área do card */
+    border-radius: 8px ;
 }
 
 .card-image img {
