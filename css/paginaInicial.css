@@ -5,6 +5,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family:Roboto;
 }
 :root {
     --roxo: #432473;
@@ -12,6 +13,7 @@
     --amarelo:  #fec35d;
     --corFundo: #FAEEC6;
     --cinza-claro: #e0e0e0;
+    
 }
 body{
     background-color: var(--branco);
@@ -45,7 +47,6 @@ main {
     gap: 30px; 
     flex-wrap: wrap; 
     padding: 20px;
-    /* background-color: var(--corFundo);  */
     font-family:Roboto;
 }
 
@@ -102,6 +103,11 @@ main {
     background-color:#f9d089 ;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 
 @media (min-width:1025px) {
         /* GUILHERME POR FAVOR CRIE UM MEDIA QUERY PARA OS CARDS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -134,12 +140,12 @@ h2 span {
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.12)
 }
 .sobrenos-paragrafo{
-    font-family:Roboto;
     text-align: justify;
     display: flex;
     flex-direction: column; 
     gap: 50px;
     width: 800px;
+    color: black;
 
 }
 
@@ -161,7 +167,6 @@ p{
 
 .original{
     color:black;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     align-items : initial;
     text-align: center;
     line-height: 600%;
@@ -226,6 +231,9 @@ p{
     display: flex;
     justify-content: center;
     gap: 50px;
+    padding: 20px; 
+    margin: 20px; 
+    flex-wrap: wrap; 
   
 
 
@@ -233,34 +241,16 @@ p{
 .faqContainer {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
     align-items: center;
-    justify-content: center; /* Alinha verticalmente ao centro */
+    justify-content: center; 
     max-width: 600px; /* Define uma largura máxima para as FAQs */
-    width: 100%; /* Permite que a largura se ajuste ao tamanho da tela */
+    width: 100%; 
 }
 
 .faqContainer h2 {
     font-size: 2.4rem;
-    text-align: center; /* Garante que o título também esteja centralizado */
-}
-
-.faq-img{
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    width: 400px;
-    padding: 16px;
-    background-color: #ffffff;
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-}
-    
-
-.faq-image.imgs{
-    width: 100%; 
-    height: auto; 
-    border-radius: 8px; 
+    text-align: center; 
 }
 
 .faqContainer .duvidas {
@@ -272,7 +262,7 @@ p{
     overflow: hidden;
     background-color: var(--cinza-claro);
     border-radius: 15px;
-    width: 100%; /* Faz as perguntas ocuparem toda a largura da .faqContainer */
+    width: 100%; 
 }
 
 .faqContainer input {
@@ -314,6 +304,50 @@ p{
     padding: 10px 0;
     z-index: 10;
 }
+.faq-img{
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 28%;
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+.faq-image.imgs {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.faq-image img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px;
+}
+.faq-img {
+    flex-shrink: 0; 
+    height: auto; 
+    align-self: flex-start; 
+}
+
+.botao-faq {
+    margin: 10px;
+    padding: 20px 40px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--amarelo);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.paragrafo-faq{
+    margin: 6px 0;
+}
+
+.botao-faq:hover {
+    background-color: #f9d089 ; 
+}
+
   
 
 /* ================FOOTER================ */
