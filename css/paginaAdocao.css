@@ -77,7 +77,8 @@ span {
 
 #noResultsMessage {
     display: none;
-    text-align: center;
+    height: 100%;
+    margin: 10px 0;
 }
 
 .card-container {

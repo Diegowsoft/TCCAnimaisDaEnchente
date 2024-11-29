@@ -103,6 +103,7 @@ createCards(cardData);
 const readMoreBtn = document.querySelector(".vermais");
 const searchInput = document.getElementById('searchInput');
 const noResultsMessage = document.getElementById('noResultsMessage');
+const footer = document.querySelector("#footer")
 
 // Função para filtrar e exibir os cards com base no nome
 function filterCards() {
@@ -116,7 +117,9 @@ function filterCards() {
     
     // Se não houver resultados, exibe a mensagem e não cria os cards
     if (filteredData.length === 0) {
-        noResultsMessage.style.display = 'block';
+        noResultsMessage.style.display = 'flex';
+        noResultsMessage.style.alignItems = 'center'
+        noResultsMessage.style.justifyContent = 'center'
     } else {
         noResultsMessage.style.display = 'none';
         createCards(filteredData); // Cria os cards filtrados
