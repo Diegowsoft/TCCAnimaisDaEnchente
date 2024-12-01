@@ -110,57 +110,59 @@ a {
     color: white;
 }
 
-
-
-@media (min-width:1025px) {
-        /* GUILHERME POR FAVOR CRIE UM MEDIA QUERY PARA OS CARDS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-}
-
 /* ===============SOBRE NÓS=============== */
+
 h2 span {
     color: var(--amarelo);
 }
-.sobre-nos{
+
+.sobre-nos {
     margin-top: 40px;
     background-color: var(--cinza-claro);
     justify-items: center;
-    
-
 }
-.container-nos{
-    
+
+.container-nos {
     display: flex;
     justify-content: space-around;
     margin: 50px;
     line-height: 30px;
+    gap: 20px;
 }
-.sobrenos-img, #imgs{
-    width: 40rem ;
+
+.sobrenos-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobrenos-img, #imgs {
+    width: 30rem;
     border-radius: 2%;
-    margin:3%;
+    margin: 3%;
 }
-#imgs{
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.12)
+
+#imgs {
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.12);
 }
-.sobrenos-paragrafo{
+
+.sobrenos-paragrafo {
     text-align: justify;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 50px;
     width: 800px;
     color: black;
-
 }
 
-.h2s{
+.h2s {
     font-size: 50px;
     margin-top: 55px;
     text-align: center;
-    align-items : initial;
     line-height: 150%;
 }
 
-p{
+p {
     font-size: 17px;
 }
 
@@ -174,58 +176,55 @@ p{
     text-align: center;
     line-height: 600%;
 }
-
-.imagem img{
+  
+.imagem img {
     height: 200px;
     width: 300px;
+    object-fit: cover;
 }
-  
+
+
 .imagem {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Para telas grandes, 5 colunas */
-    grid-template-rows: repeat(2, 1fr); /* Para telas grandes, 2 linhas */
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas: 
         "fig1 . fig2 . fig3"
         ". fig4 . fig5 .";
-    margin: 0 4rem;
+    margin: 4rem;
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
 }
+
 
 .imagem figure img {
     filter: drop-shadow(10px 10px 5px #c28e34);
 }
 
+
 .imagem .fig1 {
     grid-area: fig1;
 }
-
 .imagem .fig2 {
     grid-area: fig2;
 }
-
 .imagem .fig3 {
     grid-area: fig3;
 }
-
 .imagem .fig4 {
     grid-area: fig4;
 }
-
 .imagem .fig5 {
     grid-area: fig5;
 }
 
-/* Media Query para telas muito pequenas (por exemplo, smartphones verticais) */
-@media (max-width: 480px) {
-    .imagem {
-        grid-template-columns: 1fr; /* Uma coluna para telas muito pequenas */
-        grid-template-areas: 
-            "fig1"
-            "fig2"
-            "fig3"
-            "fig4"
-            "fig5";
-        margin: 0 0.5rem; /* Reduz a margem lateral ainda mais */
-    }
+.imagem figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /* ===============PEGUNTAS FREQUENTES=============== */
@@ -356,136 +355,212 @@ p{
 /* ================FOOTER================ */
 
 footer {
+    min-height: 15vh;
+    width: 100%;
     background-color: var(--roxo);
-    min-height: 20vh;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-footer .esquerda {
+.linksnav {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-left: 20px;
+    margin: 10px 0;
+    width: 300px;
+    align-items: center;
 }
 
-footer .esquerda a {
+.linksnav a {
+    color: var(--branco);
     text-decoration: none;
-    color: white;
-    font-size: 1.3rem;
+    font-size: 1.15rem;
+    font-weight: bold;
 }
 
-footer .esquerda a:hover {
+.linksnav a:hover {
     text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
-footer .esquerda img {
-    height: 30px;
+footer figure img {
+    height: 150px;
 }
 
-footer .direita {
+#contatos {
+    width: 300px;
+}
+
+#contatos p {
+    color: var(--branco);
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    font-size: 1.3rem;
-    margin-right: 20px;
 }
 
-footer .direita ol li {
-    list-style: none;
-    text-align: center;
-    color: white;
-}
-
-footer .centro img {
-    height: 125px;
-}
-
-footer .centro {
-    text-align: center;
-}
-
-footer .centro p {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: white;
-}
-
-.linksContato {
+#contatos .botao-contato {
     display: flex;
-    column-gap: 10px;
+    justify-content: center;
 }
 
-@media screen and (max-width: 1000px) {
-    
-    /* ===============SOBRE NÓS=============== */
-
-    .sobrenos {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .sobrenos img {
-        width: 275px;
-    }
-
-    .sobrenos p {
-        font-size: 1rem;
-    }
-
-    /* ===============FOOTER=============== */
-
-
+#contatos .botao-contato img {
+    height: 50px;
 }
 
-@media (max-width: 1536px) {
-    .imagem {
-        grid-template-columns: repeat(2, 1fr); /* Duas colunas para telas menores */
-        grid-template-areas: 
-            "fig1 fig2"
-            "fig3 fig4"
-            "fig5 fig5"; /* Ajusta as áreas para encaixar bem */
-        margin: 0 1rem; /* Diminui a margem lateral para telas menores */
-    }
-
-    .imagem figure {
-        padding: 10px; /* Ajuste de padding para os elementos */
-    }
-
-    .imagem img {
-        width: 300px; /* Faz as imagens ficarem responsivas */
-        height: 200px; /* Mantém a proporção das imagens */
-    }
+#contatos .botao-contato button {
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    border-radius: 50%;
+    transition: all ease-in-out 0.3s;
 }
 
-/* Media Query para telas muito pequenas (por exemplo, smartphones verticais) */
-@media (max-width: 1200px) {
+#contatos .botao-contato button:hover {
+    transform: scale(1.2);
+    transition: all ease-in-out 0.3s;
+}
+
+/* ================MEDIA QUERY================*/
+
+/* Quebra de linha para dispositivos extra pequenos (0-480px) */
+@media (max-width: 480px) {
 
     /* ===============SOBRE NÓS=============== */
-
-    .sobrenos {
-        display: flex;
+    .container-nos {
         flex-direction: column;
+        align-items: center;
+        margin: 20px;
     }
 
-    .sobrenos img {
-        width: 275px;
+    .sobrenos-img, #imgs {
+        width: 100%;
+        margin: 10px 0;
+        box-shadow: none;
     }
 
-    .sobrenos p {
-        font-size: 1rem;
+    .sobrenos-paragrafo {
+        width: 100%;
+        margin-top: 20px;
     }
 
-    /* ===============PQ ADOTAR=============== */
+    .h2s {
+        font-size: 30px;
+        margin-top: 20px;
+    }
 
+    p {
+        font-size: 14px;
+    }
+
+    /* ===============PORQUE ADOTAR=============== */
     .imagem {
-        grid-template-columns: 1fr; /* Uma coluna para telas muito pequenas */
+        grid-template-columns: 1fr; /* 1 coluna */
+        grid-template-rows: repeat(5, auto); /* 5 linhas, uma para cada figura */
         grid-template-areas: 
             "fig1"
             "fig2"
             "fig3"
             "fig4"
             "fig5";
-        margin: 0 0.5rem; /* Reduz a margem lateral ainda mais */
+        margin: 0 1rem;
+    }
+
+    .imagem img {
+        height: 120px;
+        width: 180px;
+    }
+}
+
+/* Breakpoint de 481px a 768px (para dispositivos médios) */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    /* ===============SOBRE NÓS=============== */
+    .container-nos {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px;
+    }
+
+    .sobrenos-img, #imgs {
+        width: 80%;
+        margin: 15px 0;
+    }
+
+    .sobrenos-paragrafo {
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    .h2s {
+        font-size: 35px;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /* ===============PORQUE ADOTAR=============== */
+    .imagem {
+        grid-template-columns: repeat(2, 1fr); /* 3 colunas */
+        grid-template-rows: repeat(3, 1fr); /* 2 linhas */
+        grid-template-areas: 
+            "fig1 fig2"
+            "fig3 fig4"
+            "fig5 fig5"
+        ;
+    }
+
+    .imagem img {
+        height: 150px;
+        width: 225px;
+    }
+}
+
+/* Breakpoint de 769px a 1279px (telas médias) */
+@media (min-width: 769px) and (max-width: 1279px) {
+
+    /* ===============SOBRE NÓS=============== */
+    .container-nos {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 40px;
+    }
+
+    .sobrenos-img, #imgs {
+        width: 75%;
+        margin: 10px;
+        object-fit: cover;
+    }
+
+    .sobrenos-paragrafo {
+        width: 50%;
+        margin-top: 0;
+    }
+
+    .h2s {
+        font-size: 45px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+}
+
+@media  (min-width: 769px) and (max-width: 1725px) {
+    /* ===============PORQUE ADOTAR=============== */
+    .imagem {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "fig1 fig2"
+            "fig3 fig4"
+            "fig5 fig5"
+        ;
+    }
+    
+    .imagem img {
+        height: 180px;
+        width: 270px;
     }
 }

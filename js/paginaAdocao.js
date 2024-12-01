@@ -79,12 +79,11 @@ function createCards(data) {
             <h3>${item.title}</h3>
             <p>${item.description}</p>
             <div>
-                <button class="btn-redirect">
-                    <img src="../img/patas.png" alt="Button 2">
-                </button>
-                <button class="btn-redirect">
-                    <img src="../img/mao (2).png" alt="Button 1">
-                </button>
+                <a href="../html/formAdocao.html">
+                    <button class="btn-redirect">
+                        <img src="../img/patas.png" alt="Button 2">
+                    </button>
+                </a>
             </div>
         `;
 
@@ -108,13 +107,13 @@ const footer = document.querySelector("#footer")
 // Função para filtrar e exibir os cards com base no nome
 function filterCards() {
     const query = searchInput.value.toLowerCase(); // Obtém o valor da busca em minúsculas
-    let filteredData = cardData.filter(item => 
+    let filteredData = cardData.filter(item =>
         item.title.toLowerCase().includes(query)
     );
-    
+
     // Limpa o conteúdo dos cards antes de atualizar
     cardContainer.innerHTML = '';
-    
+
     // Se não houver resultados, exibe a mensagem e não cria os cards
     if (filteredData.length === 0) {
         noResultsMessage.style.display = 'flex';
