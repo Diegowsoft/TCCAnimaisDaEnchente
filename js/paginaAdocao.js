@@ -21,7 +21,7 @@ let cardData = [
     },
     {
         title: 'Bella',
-        description: 'Bella: Cheia de energia e vitalidade, adora interagir e transmitir alegria com sua presença contagiante.',
+        description: 'Bella: Cheia de energia e vitalidade, dedica-se a cuidar de quem ama. Adora interagir e espalhar alegria com sua presença contagiante. Sempre leal, combina doçura com um instinto natural de proteção, sendo uma companheira verdadeiramente incomparável.',
         image: '../img/dog5.jpeg'
     },
     {
@@ -51,7 +51,7 @@ let cardData = [
     },
     {
         title: 'Marley',
-        description: 'Marley: Brilhante e cheio de vivacidade, adora aprender coisas novas e estar envolvido em momentos alegres.',
+        description: 'Marley: Brilhante e protetor, está sempre atento e dedicado a cuidar de quem ama. Adora se envolver em momentos alegres, transmitindo segurança e confiança com sua presença acolhedora.',
         image: '../img/dog11.jpeg'
     },
     {

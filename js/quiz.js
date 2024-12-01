@@ -102,27 +102,27 @@ document.addEventListener("DOMContentLoaded", () => {
             case "a":
                 result.area = "Calma e Tranquilo";
                 result.image = "../img/calmo.jpg";
-                result.extraImages = ["../img/dog1.jpeg", "../img/dog2.jpeg", "../img/dog3.jpeg"];
+                result.extraImages = ["../img/fotoquiz4.png", "../img/fotoquiz5.png", "../img/fotoquiz6.png"];
                 break;
             case "b":
                 result.area = "Amoroso";
                 result.image = "../img/amoroso.jpg";
-                result.extraImages = ["../img/cachorro4.jpg", "../img/cachorro5.jpg", "../img/cachorro6.jpg"];
+                result.extraImages = ["../img/fotoquiz7.png", "../img/fotoquiz8.png"];
                 break;
             case "c":
                 result.area = "Aventureiro";
                 result.image = "../img/aventura.jpg";
-                result.extraImages = ["../img/cachorro7.jpg", "../img/cachorro8.jpg", "../img/cachorro9.jpg"];
+                result.extraImages = ["../img/fotoquiz1.png", "../img/fotoquiz2.png", "../img/fotoquiz3.png"];
                 break;
             case "d":
                 result.area = "Protetor";
                 result.image = "../img/protetor.jpg";
-                result.extraImages = ["../img/cachorro10.jpg", "../img/cachorro11.jpg", "../img/cachorro12.jpg"];
+                result.extraImages = ["../img/fotoquiz9.png", "../img/fotoquiz10.png"];
                 break;
             case "e":
                 result.area = "Reservado";
                 result.image = "../img/reservado.jpg";
-                result.extraImages = ["../img/cachorro13.jpg", "../img/cachorro14.jpg", "../img/cachorro15.jpg"];
+                result.extraImages = ["../img/fotoquiz11.png", "../img/fotoquiz12.png"];
                 break;
         }
 
