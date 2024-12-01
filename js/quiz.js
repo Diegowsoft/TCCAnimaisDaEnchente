@@ -11,10 +11,10 @@ const questions = [
     {
         question: "Um amigo seu está meio para baixo, o que você faz?",
         options: [
-            { text: "Tento fazer ele sorrir, compartilhando algo engraçado ou divertido.", answer: "a"},
-            { text: "Ofereço meu apoio, mostrando que ele pode contar comigo para o que precisar.", answer: "b" },
-            { text: "Pergunto o que está acontecendo para tentar entender o que está deixando ele para baixo.", answer: "c"},
-            { text: "Fico ao lado dele, oferecendo minha companhia até que ele se sinta à vontade para falar.", answer: "d"}
+            { text: "Faço ele sorrir com algo engraçado.", answer: "a"},
+            { text: "Ofereço apoio e me coloco à disposição.", answer: "b" },
+            { text: "Pergunto o que está acontecendo.", answer: "c"},
+            { text: "Fico ao lado dele e espero.", answer: "d"}
         ]
     },
     

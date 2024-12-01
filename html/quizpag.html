@@ -14,7 +14,7 @@
             padding: 0;
             height: 100%;
             font-family: Arial, sans-serif;
-            background-color: #faeec6;
+            background-color: #faf8f5;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -35,7 +35,7 @@
         }
 
         .card {
-            background-color: #fff;
+            background-color: #e0e0e0;
             border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -120,10 +120,33 @@
                 max-width: 80px;
             }
         }
+
+        #button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #432473;
+            color: white;
+            width: 70px;
+            height: 40px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        #button:hover {
+            background-color: #7957ac;
+        }
     </style>
 </head>
 
 <body>
+    <a href="../index.html" id="button">Home</a>
     <section>
         <div class="container card">
             <img src="../img/logo-img.jpg" alt="Logo" class="logo-img">

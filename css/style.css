@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-
+:root {
+    --roxo: #432473;
+    --branco: #faf8f5;
+    --amarelo:  #fec35d;
+    --corFundo: #FAEEC6;
+    --cinza-claro: #e0e0e0;
+    
+}
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
-    background-color: #faeec6;
+    background-color: var(--branco);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,20 +32,20 @@ body, html {
 }
 
 .card {
-    background-color: #fff;
+    background-color: var(--cinza-claro);
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
-    flex-grow: 1;
+    max-width: 400px; 
+    min-height: 500px; 
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    overflow: visible; /* Permite conteúdo extra */
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-
-
 
 h3 {
     font-family: 'Courgette', cursive;
@@ -77,6 +84,9 @@ h3 {
 #result-card {
     text-align: center;
     margin-top: 20px;
+    overflow-y: auto; /* Adiciona barra de rolagem vertical, se necessário */
+    padding: 20px; 
+    
 }
 
 .result-image {
@@ -93,8 +103,8 @@ h3 {
     font-weight: bold;
     color: #333;
     margin-top: 10px;
-        
 }
+
 .extra-images {
     display: flex; 
     flex-wrap: wrap;
@@ -113,14 +123,13 @@ h3 {
 }
 
 .extra-images img:hover {
-    transform: scale(4.2); 
+    transform: scale(1.5); 
 }
-
 
 #restart {
     margin-top: 20px;
     padding: 12px;
-    background-color:#432473;
+    background-color: #432473;
     color: white;
     border: none;
     border-radius: 30px;
@@ -135,11 +144,12 @@ h3 {
 
 .logo-img {
     max-width: 150px;
-    margin-bottom: 20px;}
+    margin-bottom: 20px;
+}
 
-
-.alink{
+.alink {
     color: #fff;
+    text-decoration: none;
 }
 
 .start-button {
@@ -175,6 +185,8 @@ h3 {
     .card {
         padding: 15px;
         justify-content: center;
+        max-width: 350px; /* Tamanho ajustado */
+        max-height: 450px; /* Altura ajustada */
     }
 
     h3 {
@@ -210,7 +222,9 @@ h3 {
     .card {
         padding: 15px;
         justify-content: center;
-        height: 90%;
+        max-width: 300px;
+        max-height: 400px;
+        height: 400px;
     }
 
     h3 {
@@ -245,4 +259,3 @@ h3 {
         max-width: 80px;
     }
 }
-
