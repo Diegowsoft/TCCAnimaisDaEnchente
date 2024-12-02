@@ -20,6 +20,7 @@
 body {
     background-color: var(--branco);
     font-family: 'roboto';
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .bg-custom {
@@ -28,16 +29,19 @@ body {
 
 nav {
     font-size: 1.75rem;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 nav .collapse ul li a:hover {
     text-decoration: underline;
-    cursor: url('../img/tennis.png'), auto;
+    cursor: url('../img/cursopata.png'), auto;
+    
 }
 
 .logo {
     width: 8rem;
-    cursor: url('../img/tennis.png'), auto;
+    cursor: url('../img/cursopata.png'), auto;
+    
 }
 
 h1 {
@@ -110,7 +114,7 @@ article img {
     display: block;
     margin: 20px auto 0;
     transition: transform 0.2s;
-    cursor: pointer;
+    cursor: url('../img/cursopata.png'), auto;
     border-radius: 5px;
     border: none;
 
@@ -119,15 +123,53 @@ article img {
 .botao:hover {
     background-color: #a996c7;
     transform: scale(1.1);
+    cursor: url('../img/cursopata.png'), auto;
+}
+
+/* Botão copia e cola */
+
+#texto {
+    position: absolute;
+    left: -9999px;  /* Esconde a textarea fora da tela */
+    width: 1px; /* A textarea terá a largura mínima */
+    height: 1px; /* A altura também é mínima */
+}
+
+#copiarBtn {
+    width: 100px;
+    height: 40px;
+    background-color: var(--roxo);
+    color: var(--branco);
+    display: block;
+    margin: 20px auto 0;
+    transition: transform 0.2s;
+    cursor: url('../img/cursopata.png'), auto;
+    border-radius: 5px;
+    border: none;
+}
+
+#copiarBtn:hover {
+    background-color: #a996c7;
+}
+
+#mensagem {
+
+    margin-top: -35px;
+    color: #44247394;
+
+
+    
 }
 
 .a {
     color: var(--branco);
     text-decoration: none;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .a:hover {
     background-color: #a996c7;
+    cursor: url('../img/cursopata.png'), auto;
     
 }
 
@@ -140,6 +182,7 @@ article img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 2%;
     padding: 20px;
+    cursor: url('../img/cursopata.png'), auto;
     
 }
 
@@ -174,11 +217,13 @@ span {
     width: 150px;
     color: var(--branco);
     text-align: center;
+    cursor: url('../img/cursopata.png'), auto;
 
 }
 
 .submit:hover {
     background-color: #a996c7;
+    cursor: url('../img/cursopata.png'), auto;
 
 }
 
@@ -192,6 +237,7 @@ textarea {
     background-color: var(--branco);
     box-sizing: border-box;
     margin-bottom: 1px;
+    cursor: url('../img/cursopata.png'), auto;
 
 }
 
@@ -205,6 +251,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .linksnav {
@@ -220,11 +267,13 @@ footer {
     text-decoration: none;
     font-size: 1.15rem;
     font-weight: bold;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .linksnav a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 footer figure img {
@@ -233,6 +282,7 @@ footer figure img {
 
 #contatos {
     width: 300px;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 #contatos p {
@@ -244,6 +294,7 @@ footer figure img {
 #contatos .botao-contato {
     display: flex;
     justify-content: center;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 #contatos .botao-contato img {
@@ -257,6 +308,7 @@ footer figure img {
     display: flex;
     border-radius: 50%;
     transition: all ease-in-out 0.3s;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 #contatos .botao-contato button:hover {
