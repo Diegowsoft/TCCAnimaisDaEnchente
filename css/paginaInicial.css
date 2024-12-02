@@ -160,6 +160,8 @@ h2 span {
     margin-top: 55px;
     text-align: center;
     line-height: 150%;
+    color: var(--roxo);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 p {
@@ -171,10 +173,11 @@ p {
 /* ===============PORQUE ADOTAR=============== */
 
 .original{
-    color:black;
+    color:var(--roxo);
     align-items : initial;
     text-align: center;
     line-height: 600%;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
   
 .imagem img {

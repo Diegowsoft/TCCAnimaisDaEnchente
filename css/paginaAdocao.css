@@ -41,12 +41,18 @@ nav .collapse ul li a:hover {
     align-items: center;
     justify-content: center;
     margin: 50px 0;
+    color: var(--roxo);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 span {
     color: var(--amarelo);
 }
 
+h2{
+    color: var(--roxo);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
 /* Search Section */
 .search {
     text-align: center;
