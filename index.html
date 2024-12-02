@@ -17,17 +17,6 @@
 
 <body>
 
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-
     <!--===============HEADER===============-->
     <header>
         <nav class="navbar navbar-expand-lg bg-custom" data-bs-theme="dark">
@@ -105,14 +94,14 @@
                 <div class="card-image"> <img src="./img/faqimg.png" alt="cao"></div>
                 <h3 class="card-titulo">Seja um voluntário</h3>
                 <p class="card-paragrafo">Faça a diferança na vida dos pets</p>
-                <button class="add-to-cart"> <a href="./html/doacao.html">Ser voluntário</a></button>
+                <a href="./html/doacao.html"><button class="add-to-cart">Seja um voluntário</button></a>
             </div>
 
             <div class="card">
                 <div class="card-image"><img src="./img/cachorro-1.jpeg" alt="cao"></div>
                 <h3 class="card-titulo">Quero adotar</h3>
                 <p class="card-paragrafo">Dê uma nova chance a um pet</p>
-                <button class="add-to-cart"><a href="./html/paginaAdocao.html">Adotar</a></button>
+                <a href="./html/paginaAdocao.html"><button class="add-to-cart">Adotar</button></a>
             </div>
 
 
@@ -120,7 +109,7 @@
                 <div class="card-image"><img src="./img/imgcard.png" alt="cao"></div>
                 <h3 class="card-titulo">Faça uma doação</h3>
                 <p class="card-paragrafo">Ajude a transformar vidas de pets</p>
-                <button class="add-to-cart"><a href="./html/doacao.html">Doe agora</a></button>
+                <a href="./html/doacao.html"><button class="add-to-cart">Doe agora</button></a>
             </div>
 
         </section>
@@ -262,9 +251,7 @@
                 <p class="paragrafo-faq">Não encontrou sua resposta? Entre em contato conosco e teremos prazer em ajudar!</p>
                 <button class="botao-faq" onclick="window.open('https:/mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Olá%20aumigo!&body=Olá%20aumigo!%0D%0A%0D%0AQual%20seria%20sua%20dúvida%20ou%20necessidade?%0D%0A%0D%0AEstamos%20à%20disposição%20para%20ajudar!', '_blank');">
                     Central de FAQ
-                </button> 
-
-
+                </button>
             </div>
         </section>
     </main>
@@ -299,7 +286,20 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/PrabothCharith/accessibility-plugin@main/accessibility-menu.min.js"></script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
 </body>
 
 </html>

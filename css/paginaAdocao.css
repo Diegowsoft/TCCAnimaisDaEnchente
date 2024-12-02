@@ -15,6 +15,7 @@
 
 body {
     background-color: var(--branco);
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 
@@ -28,10 +29,12 @@ nav {
 
 nav .collapse ul li a:hover {
     text-decoration: underline;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .logo {
     width: 8rem;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 /*===============CONTEUDO===============*/
@@ -41,12 +44,19 @@ nav .collapse ul li a:hover {
     align-items: center;
     justify-content: center;
     margin: 50px 0;
+    color: var(--roxo);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 span {
     color: var(--amarelo);
 }
 
+h2{
+    color: var(--roxo);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
 /* Search Section */
 .search {
     text-align: center;
@@ -73,6 +83,7 @@ span {
 .search button:hover {
     background-color: var(--amarelo);
     color: var(--roxo);
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 #noResultsMessage {
@@ -82,10 +93,8 @@ span {
 }
 
 .card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     place-self: center;
     max-width: 1100px;
@@ -93,6 +102,7 @@ span {
     margin: 0 30px;
     max-height: 750px;
     padding: 10px 0;
+    overflow: hidden;
 }
 
 .card-container.show-more {
@@ -111,6 +121,7 @@ span {
 .card img {
     height: 350px;
     border-radius: 10px;
+    
 }
 
 .card .overlay {
@@ -141,6 +152,7 @@ span {
 
 .card .overlay button img {
     height: 30px;
+   
 }
 
 .card .overlay button {
@@ -166,6 +178,7 @@ span {
     border: 2px solid var(--roxo);
     border-radius: 6px;
     position: relative;
+    cursor: url('../img/cursopata.png'), auto;
 }
   
 .vermais::before {
@@ -180,6 +193,8 @@ span {
   
 .vermais:hover {
     color: white;
+    cursor: url('../img/cursopata.png'), auto;
+
 }
   
 .vermais:before {
@@ -193,6 +208,13 @@ span {
     left: -30px;
 }
 
+
+#topo {
+    display: flex;
+    max-width: 150px;
+    justify-self: flex-end;
+}
+
 .button {
     width: 40px;
     height: 40px;
@@ -203,7 +225,6 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-self: flex-end;
     cursor: pointer;
     transition-duration: 0.3s;
     overflow: hidden;
@@ -261,6 +282,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .linksnav {
@@ -281,6 +303,7 @@ footer {
 .linksnav a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 footer figure img {
@@ -295,15 +318,18 @@ footer figure img {
     color: var(--branco);
     display: flex;
     justify-content: center;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 #contatos .botao-contato {
     display: flex;
     justify-content: center;
+    
 }
 
 #contatos .botao-contato img {
     height: 50px;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 #contatos .botao-contato button {
@@ -313,9 +339,102 @@ footer figure img {
     display: flex;
     border-radius: 50%;
     transition: all ease-in-out 0.3s;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 #contatos .botao-contato button:hover {
     transform: scale(1.2);
     transition: all ease-in-out 0.3s;
+}
+
+/* ================MEDIA QUERY================*/
+
+/* Quebra de linha para dispositivos extra pequenos (0-480px) */
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr;
+        place-items: center;
+        overflow: hidden;
+        max-height: 1200px;
+    }
+    
+    .card {
+        width: 300px;
+    }
+    
+    .card img {
+        height: 375px;
+    }
+    
+    .card-container.show-more {
+        max-height: 2390px;
+    }
+
+    .button:hover {
+        width: 40px;
+        transition: none;
+    }
+
+    .button:hover .svgIcon {
+        transform: none;
+        transition: none;
+    }
+
+    .button:hover::before {
+        font-size: 0;
+        opacity: 0;
+        transition: none;
+    }
+
+    /* ===============FOOTER=============== */
+    footer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    footer figure {
+        order: -1;
+        margin-top: 20px;
+    }
+}
+
+/* Breakpoint de 481px a 768px (para dispositivos médios) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .button:hover {
+        width: 40px;
+        transition: none;
+    }
+
+    .button:hover .svgIcon {
+        transform: none;
+        transition: none;
+    }
+
+    .button:hover::before {
+        font-size: 0;
+        opacity: 0;
+        transition: none;
+    }
+    
+    /* ===============FOOTER=============== */
+    footer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    footer figure {
+        order: -1;
+        margin-top: 20px;
+    }
+}
+
+/* Breakpoint de 769px a 1279px (telas médias) */
+@media (min-width: 769px) and (max-width: 1279px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        overflow: hidden;
+    }
 }

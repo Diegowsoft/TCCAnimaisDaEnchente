@@ -7,15 +7,20 @@
     margin: 0;
 }
 
+
 :root {
     --roxo: #432473;
     --branco: #faf8f5;
     --amarelo: #fec35d;
-    --corFundo: #faeec6;
+    --corFundo: #FAEEC6;
+    --cinza-claro: #e0e0e0;
+    --cinza-escuro: #4a4a4a;
 }
 
 body {
-    background-color: var(--corFundo);
+    background-color: var(--branco);
+    font-family: 'roboto';
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .bg-custom {
@@ -24,27 +29,37 @@ body {
 
 nav {
     font-size: 1.75rem;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 nav .collapse ul li a:hover {
     text-decoration: underline;
-    cursor: url('../img/tennis.png'), auto;
+    cursor: url('../img/cursopata.png'), auto;
+    
 }
 
 .logo {
     width: 8rem;
-    cursor: url('../img/tennis.png'), auto;
+    cursor: url('../img/cursopata.png'), auto;
+    
 }
 
-main {
+h1 {
     text-align: center;
     margin: 3%;
+    color: var(--roxo);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 main p {
     margin: 2%;
     font-size: 20px;
+    color: black;
+    text-align: center;
 
+}
+.contribuir{
+        color: var(--amarelo);
 }
 
 
@@ -55,7 +70,7 @@ main p {
 }
 
 article div {
-    background-color: #faf8f5;
+    background-color: var(--cinza-claro);
     flex: 1 1 30%;
     /* Controla o tamanho de cada div */
     box-sizing: border-box;
@@ -91,113 +106,212 @@ article img {
 }
 
 
-.butao {
-    width: 50px;
-    height: auto;
+.botao {
+    width: 100px;
+    height: 40px;
+    background-color: var(--roxo);
+    color: var(--branco);
     display: block;
     margin: 20px auto 0;
     transition: transform 0.2s;
-    cursor: url('../img/tennis.png'), auto;
+    cursor: url('../img/cursopata.png'), auto;
+    border-radius: 5px;
+    border: none;
+
 }
 
-.butao:hover {
+.botao:hover {
+    background-color: #a996c7;
     transform: scale(1.1);
+    cursor: url('../img/cursopata.png'), auto;
+}
+
+/* Botão copia e cola */
+
+#texto {
+    position: absolute;
+    left: -9999px;  /* Esconde a textarea fora da tela */
+    width: 1px; /* A textarea terá a largura mínima */
+    height: 1px; /* A altura também é mínima */
+}
+
+#copiarBtn {
+    width: 100px;
+    height: 40px;
+    background-color: var(--roxo);
+    color: var(--branco);
+    display: block;
+    margin: 20px auto 0;
+    transition: transform 0.2s;
+    cursor: url('../img/cursopata.png'), auto;
+    border-radius: 5px;
+    border: none;
+}
+
+#copiarBtn:hover {
+    background-color: #a996c7;
+}
+
+#mensagem {
+
+    margin-top: -35px;
+    color: #44247394;
+
+
+    
+}
+
+.a {
+    color: var(--branco);
+    text-decoration: none;
+    cursor: url('../img/cursopata.png'), auto;
+}
+
+.a:hover {
+    background-color: #a996c7;
+    cursor: url('../img/cursopata.png'), auto;
+    
 }
 
 
-.voluntarios{
-    height: 150px;
-    background-color: #faf8f5;
+
+#voluntarios {
+    height: auto;
+    background-color: var(--cinza-claro);
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 2%;
-    margin-bottom: 50px;
+    padding: 20px;
+    cursor: url('../img/cursopata.png'), auto;
+    
 }
 
-.voluntariotxt {
+.voluntariotxt{
     padding-top: 10px;
+    color: var(--roxo);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 10px 0;
+    font-size: 30px;
+}
+span {
+    color: var(--amarelo);
+}
+.voluntariop{
+    padding-top: 10px;
+    font-size: 20px;
+    }
+
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
 }
 
-.sub-butao, .sub-butao-container{
-    display: inline-block;  
-    vertical-align: middle;  /* Alinha verticalmente ao centro */
-    width: 50px;
-    height: auto;
-    display: inline;
-    transition: transform 0.2s;
-    cursor: url('../img/tennis.png'), auto;
+.submit {
+    background-color: var(--roxo);
+    width: 150px;
+    color: var(--branco);
+    text-align: center;
+    cursor: url('../img/cursopata.png'), auto;
+
 }
 
-.sub-butao{
-    border: 2px solid #432473;
-    border-radius: 20%;
+.submit:hover {
+    background-color: #a996c7;
+    cursor: url('../img/cursopata.png'), auto;
+
 }
 
-.sub-butao:hover {
-    transform: scale(1.1);
+input,
+textarea {
+    width: 80%;
+    max-width: 600px;
+    padding: 9px;
+    border-radius: 5px;
+    border: 1px solid var(--cinza-claro);
+    background-color: var(--branco);
+    box-sizing: border-box;
+    margin-bottom: 1px;
+    cursor: url('../img/cursopata.png'), auto;
+
 }
+
+
 
 
 footer {
+    min-height: 15vh;
+    width: 100%;
     background-color: var(--roxo);
-    min-height: 20vh;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
-footer .esquerda {
+.linksnav {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-left: 20px;
-
+    margin: 10px 0;
+    width: 300px;
+    align-items: center;
 }
 
-footer .esquerda a {
+.linksnav a {
+    color: var(--branco);
     text-decoration: none;
-    color: black;
-    font-size: 1.3rem;
-    color: white;
-    cursor: url('../img/tennis.png'), auto;
+    font-size: 1.15rem;
+    font-weight: bold;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
-footer .esquerda a:hover {
+.linksnav a:hover {
     text-decoration: underline;
+    text-decoration-thickness: 2px;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
-footer .esquerda img {
-    height: 30px;
+footer figure img {
+    height: 150px;
 }
 
-footer .direita {
+#contatos {
+    width: 300px;
+    cursor: url('../img/cursopata.png'), auto;
+}
+
+#contatos p {
+    color: var(--branco);
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    font-size: 1.3rem;
-    margin-right: 20px;
 }
 
-footer .direita ol li {
-    list-style: none;
-    text-align: center;
-    color: white;
-}
-
-footer .centro img {
-    height: 125px;
-}
-
-footer .centro {
-    text-align: center;
-}
-
-footer .centro p {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: white;
-}
-
-.linksContato {
+#contatos .botao-contato {
     display: flex;
-    column-gap: 10px;
+    justify-content: center;
+    cursor: url('../img/cursopata.png'), auto;
+}
+
+#contatos .botao-contato img {
+    height: 50px;
+}
+
+#contatos .botao-contato button {
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    border-radius: 50%;
+    transition: all ease-in-out 0.3s;
+    cursor: url('../img/cursopata.png'), auto;
+}
+
+#contatos .botao-contato button:hover {
+    transform: scale(1.2);
+    transition: all ease-in-out 0.3s;
 }
