@@ -21,6 +21,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--branco);
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 h1 {
@@ -61,6 +62,7 @@ input, textarea {
     margin-bottom: 8px;
     background-color: var(--cinza-claro);
     text-align: left;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .submit{
@@ -89,10 +91,12 @@ button{
 }
 button:hover{
         background-color: #a996c7;
+        cursor: url('../img/cursopata.png'), auto;
            }
 
     a{
         color: var(--branco);
         text-decoration: none;
+        cursor: url('../img/cursopata.png'), auto;
     }
      

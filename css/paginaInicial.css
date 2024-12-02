@@ -17,10 +17,12 @@
 }
 body{
     background-color: var(--branco);
+    cursor: url('../img/cursopata.png'), auto;
    
 }
 .bg-custom {
     background-color: var(--roxo);
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 nav {
@@ -29,10 +31,12 @@ nav {
 
 nav .collapse ul li a:hover {
     text-decoration: underline;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .logo {
     width: 8rem;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 
@@ -48,6 +52,7 @@ main {
     flex-wrap: wrap; 
     padding: 20px;
     font-family: Roboto;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .card {
@@ -104,11 +109,13 @@ main {
 
 .add-to-cart:hover {
     background-color: #f9d089;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 a {
     text-decoration: none;
     color: white;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 /* ===============SOBRE NÓS=============== */
@@ -240,6 +247,7 @@ p {
     padding: 20px; 
     margin: 20px; 
     flex-wrap: wrap; 
+    cursor: url('../img/cursopata.png'), auto;
   
 
 
@@ -252,6 +260,7 @@ p {
     justify-content: center; 
     max-width: 600px; /* Define uma largura máxima para as FAQs */
     width: 100%; 
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .faqContainer h2 {
@@ -273,12 +282,14 @@ p {
 
 .faqContainer input {
     appearance: none;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .faqContainer .duvidas label {
     display: flex;
     align-items: center;
     cursor: pointer;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .faqContainer .duvidas label::after {
@@ -288,6 +299,7 @@ p {
     color: black;
     transition: transform 1s;
     font-size: 2em;
+    
 }
 
 .faqContainer .duvidas input:checked ~ label::after {
@@ -331,6 +343,7 @@ p {
     width: 100%; 
     height: auto; 
     border-radius: 8px;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .faq-img {
@@ -348,6 +361,7 @@ p {
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .paragrafo-faq{
@@ -356,6 +370,7 @@ p {
 
 .botao-faq:hover {
     background-color: #f9d089 ; 
+    cursor: url('../img/cursopata.png'), auto;
 }
 
   
@@ -369,6 +384,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 .linksnav {
@@ -421,11 +437,13 @@ footer figure img {
     display: flex;
     border-radius: 50%;
     transition: all ease-in-out 0.3s;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 #contatos .botao-contato button:hover {
     transform: scale(1.2);
     transition: all ease-in-out 0.3s;
+    cursor: url('../img/cursopata.png'), auto;
 }
 
 /* ================MEDIA QUERY================*/
