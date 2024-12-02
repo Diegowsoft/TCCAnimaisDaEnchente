@@ -55,7 +55,7 @@
 
     <!-- CONTEUDO -->
     <main>
-        <h1>Formas de Contribuir</h1>
+        <h1>Formas de <span class="contribuir">Contribuir</span></h1>
         <p>Se o nosso projeto Animais da Enchente tocou seu coração, saiba que há várias maneiras de nos apoiar! Sua
             contribuição pode ser feita por meio de:</p>
     </main>
@@ -69,7 +69,7 @@
                 de dúvidas ou se deseja entrar em contato para conversar sobre doações, clique no botão abaixo.
                 Agradecemos muito pelo seu apoio!
                 <button class="botao">
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Quero ajudar!&body=Olá, gostaria de contribuir com doações."
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Quero ajudar!&body=Olá, gostaria de contribuir com doações." a class="a"
                         target="_blank" title="Envie um e-mail pelo Gmail">Enviar
 
                 </button>
@@ -84,7 +84,7 @@
             <p class="paragrafos">Seja um lar temporário para um amigo de quatro patas enquanto ele busca uma família
                 definitiva! Basta ter tempo, carinho e dedicação para cuidar dele. (Os custos com alimentação e saúde
                 são cobertos pelo projeto). Quer ajudar? Clique no botão e entre em contato conosco!
-                <button class="botao"><a
+                <button class="botao"><a a class="a"
                         href="https://mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Quero ajudar!&body=Olá, gostaria de contribuir com doações."
                         target="_blank" title="Envie um e-mail pelo Gmail">Enviar
                     </a></button>
@@ -99,7 +99,7 @@
                 Ração, brinquedos, medicamentos e outros itens essenciais que garantem o conforto e a saúde dos animais.
                 Cada gesto faz a diferença na vida desses companheiros que tanto precisam de carinho e cuidados. Para
                 contribuir, basta clicar na botão abaixo e entrar em contato conosco.
-                <button class="botao"><a
+                <button class="botao"><a class="a"
                         href="https://mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Quero ajudar!&body=Olá, gostaria de contribuir com doações."
                         target="_blank" title="Envie um e-mail pelo Gmail">Enviar
                     </a>
@@ -109,110 +109,100 @@
 
     </article>
 
-    <section>
-        <div class="voluntarios">
-            <h3 class="voluntariotxt">Seja voluntário e faça a diferença na vida de nossos peludos!</h3>
-            <p class="voluntariotxt">
-                Estamos em busca de pessoas dispostas a doar seu tempo e dedicação para ajudar em diversas atividades.
-                Para mais informações, clique na patinha e preencha o formulário!
-            </p>
+
+    <div id="voluntarios">
+        <h3 class="voluntariotxt">Seja voluntário e faça a diferença na vida de <span>nossos peludinhos!</span></h3>
+        <p class="voluntariop">
+            Estamos em busca de pessoas dispostas a doar seu tempo e dedicação para ajudar em diversas atividades.
+            Para mais informações, clique na patinha e preencha o formulário!
+        </p>
 
 
 
-            <!-- Formulário -->
-            <section id="form-section">
+        <!-- Formulário -->
+        <section id="form-section">
 
-                <form id="contact-form">
-                    <label for="voluntario-nome">Nome:</label>
-                    <input type="text" id="voluntario-nome" name="voluntario_nome" placeholder="Nome Sobrenome"
-                        required> <br>
+            <form id="contact-form">
 
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email_voluntario" placeholder="Seu e-mail" required> <br>
+                <input type="text" id="voluntario-nome" name="voluntario_nome" placeholder="Nome Sobrenome" required>
+                <br>
 
-                    <label for="age">Idade:</label>
-                    <input type="number" id="age" name="idade" placeholder="Exemplo: 22" required> <br>
+                <input type="email" id="email" name="email_voluntario" placeholder="Seu e-mail" required> <br>
 
-                    <label for="phone">Contato:</label>
-                    <input type="tel" id="phone" name="numero_contato" placeholder="(11)90000-0000" required> <br>
+                <input type="number" id="age" name="idade" placeholder="Exemplo: 22" required> <br>
 
-                    <label for="experiencia">Experiência:</label>
-                    <input type="text" id="experiencia" name="experiencia_voluntario"
-                        placeholder="Descreva sua experiência" required> <br>
+                <input type="tel" id="phone" name="numero_contato" placeholder="(11)90000-0000" required> <br>
 
-                    <label for="message">Disponibilidade</label>
-                    <textarea id="message" name="mensagem" placeholder="Dia da semana, período"></textarea> <br>
+                <input type="text" id="experiencia" name="experiencia_voluntario"
+                    placeholder="Tem experiência como voluntário" required> <br>
 
-                    <input type="submit" value="Enviar" class="submit">
-                </form>
+                <textarea id="message" name="mensagem" placeholder="Disponibilidade: dia da semana, período"></textarea>
+                <br>
 
-            </section>
+                <input type="submit" value="Enviar" class="submit">
+            </form>
 
-            <script>
-                document.getElementById("contact-form").addEventListener("submit", function (e) {
-                    e.preventDefault();
+        </section>
 
-                    const serviceID = "service_2fj6p6a";
-                    const templateID = "template_muernmb";
-
-                    emailjs.sendForm(serviceID, templateID, this)
-                        .then(
-                            () => alert("E-mail enviado com sucesso!"),
-                            (error) => alert("Erro ao enviar o e-mail: " + error.text)
-                        );
-                });
-
-            </script>
-
-        </div>
-
-        <!-- vlibras -->
-
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
-            </div>
-        </div>
-        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
         <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
+            document.getElementById("contact-form").addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const serviceID = "service_2fj6p6a";
+                const templateID = "template_muernmb";
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(
+                        () => alert("E-mail enviado com sucesso!"),
+                        (error) => alert("Erro ao enviar o e-mail: " + error.text)
+                    );
+            });
+
         </script>
 
-        <!-- footer -->
+    </div>
+
+    <!-- vlibras -->
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- footer -->
 
 
-        <footer>
-            <div class="esquerda">
-                <figure class="linksContato">
-                    <a href="https://www.instagram.com/animaisdaenchente_nh/" target="_blank"><img
-                            src="../img/instagram.png" alt="instagram"></a>
-                    <figcaption><a href="https://www.instagram.com/animaisdaenchente_nh/" target="_blank">instagram</a>
-                    </figcaption>
-                </figure>
-                <figure class="linksContato">
-                    <a href="#" target="_blank"><img src="../img/whatsapp.png" alt="whatsapp"></a>
-                    <figcaption><a href="#" target="_blank">whatsapp</a></figcaption>
-                </figure>
-            </div>
+    <footer id="footer">
 
-            <div class="centro">
-                <img src="../img/logo-removebg-preview.png" alt="logo">
-                <p>Dando voz aos que não tem</p>
-                <p>&copy;2021 Copyright: Todos os direitos reservados</p>
-            </div>
-
-            <div class="direita">
-                <ol>
-                    <li>Diego F.</li>
-                    <li>Gabriel B.</li>
-                    <li>Guilherme F.</li>
-                    <li>Isabela M.</li>
-                    <li>Larissa V.</li>
-                    <li>Leticia S.</li>
-                </ol>
-            </div>
-        </footer>
+        <div id="contatos">
+          <p>Siga-nos e faça parte da nossa história:</p>
+          <div class="botao-contato">
+            <a href="https://www.instagram.com/animaisdaenchente_nh" target="_blank"><button><img
+                  src="../img/instagram (2).png" alt=""></button></a>
+            <a href="https://www.facebook.com/people/Animais-da-Enchente-NH/61564822771007/" target="_blank"><button><img
+                  src="../img/facebook.png" alt=""></button></a>
+            <a href="https://chat.whatsapp.com/LAT7UbUaJypATRDAIoAEFq" target="_blank"><button><img
+                  src="../img/whatsapp.png" alt=""></button></a>
+          </div>
+        </div>
+    
+        <figure><img src="../img/logo-removebg-preview.png" alt="logo cliente"></figure>
+    
+        <div class="linksnav">
+          <a href="../index.html">Home</a>
+          <a href="./doacao.html">Contribuição</a>
+          <a href="./paginaAdocao.html">Adoção</a>
+          <a href="./reencontro.html">Reencontro</a>
+          <a href="./quizpag.html">Quiz</a>
+        </div>
+      </footer>
+    
 </body>
 
 </html>
