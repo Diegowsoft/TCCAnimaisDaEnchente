@@ -92,13 +92,14 @@ main {
 }
 
 .add-to-cart {
-    padding: 8px 16px;
+    padding: 8px 16px;  
     background-color: var(--amarelo);
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 .add-to-cart:hover {
@@ -309,6 +310,7 @@ p {
     padding: 10px 0;
     z-index: 10;
 }
+
 .faq-img{
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -317,18 +319,20 @@ p {
     background-color: #ffffff;
     text-align: center;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
 }
+
 .faq-image.imgs {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
+
 .faq-image img {
     width: 100%; 
     height: auto; 
     border-radius: 8px;
 }
+
 .faq-img {
     flex-shrink: 0; 
     height: auto; 
@@ -345,6 +349,7 @@ p {
     border-radius: 5px;
     transition: background-color 0.3s;
 }
+
 .paragrafo-faq{
     margin: 6px 0;
 }
@@ -455,9 +460,28 @@ footer figure img {
         font-size: 14px;
     }
 
+    /* ===============PERGUNTAS FREQUENTES=============== */
+    .faq-img {
+        width: 100%;
+    }
+
+    /* ===============FOOTER=============== */
+    footer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    footer figure {
+        order: -1;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 530px) {
     /* ===============PORQUE ADOTAR=============== */
     .imagem {
-        grid-template-columns: 1fr; /* 1 coluna */
+        grid-template-columns: 100%; /* 1 coluna */
         grid-template-rows: repeat(5, auto); /* 5 linhas, uma para cada figura */
         grid-template-areas: 
             "fig1"
@@ -503,6 +527,26 @@ footer figure img {
         font-size: 16px;
     }
 
+    /* ===============PERGUNTAS FREQUENTES=============== */
+    .faq-img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* ===============FOOTER=============== */
+    footer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    footer figure {
+        order: -1;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 531px) and (max-width: 768px) {
     /* ===============PORQUE ADOTAR=============== */
     .imagem {
         grid-template-columns: repeat(2, 1fr); /* 3 colunas */
@@ -547,6 +591,24 @@ footer figure img {
 
     p {
         font-size: 17px;
+    }
+
+    /* ===============PERGUNTAS FREQUENTES=============== */
+    .faq-img {
+        width: 500px;
+    }    
+}
+
+@media (min-width: 769px) and (max-width: 1050px) {
+    /* ===============SOBRE NÓS=============== */
+    .container-nos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobrenos-paragrafo {
+        width: 750px;
     }
 }
 
