@@ -7,15 +7,19 @@
     margin: 0;
 }
 
+
 :root {
     --roxo: #432473;
     --branco: #faf8f5;
     --amarelo: #fec35d;
-    --corFundo: #faeec6;
+    --corFundo: #FAEEC6;
+    --cinza-claro: #e0e0e0;
+    --cinza-escuro: #4a4a4a;
 }
 
 body {
-    background-color: var(--corFundo);
+    background-color: var(--branco);
+    font-family: 'roboto';
 }
 
 .bg-custom {
@@ -55,7 +59,7 @@ main p {
 }
 
 article div {
-    background-color: #faf8f5;
+    background-color: var(--cinza-claro);
     flex: 1 1 30%;
     /* Controla o tamanho de cada div */
     box-sizing: border-box;
@@ -91,51 +95,80 @@ article img {
 }
 
 
-.butao {
-    width: 50px;
+.botao {
+    width: 80px;
     height: auto;
+    background-color: var(--roxo);
+    color: var(--branco);
     display: block;
     margin: 20px auto 0;
     transition: transform 0.2s;
-    cursor: url('../img/tennis.png'), auto;
+    cursor: pointer;
+    border-radius: 5px;
+   
 }
 
-.butao:hover {
+.botao:hover {
+    background-color: var(--branco);
+    color: var(--roxo);
     transform: scale(1.1);
 }
+a {
+    color: var(--branco);
+    text-decoration: none;
+}
+a:hover{
+    background-color: var(--branco);
+    color: var(--roxo);
+}
 
 
-.voluntarios{
-    height: 150px;
-    background-color: #faf8f5;
+
+.voluntarios {
+    height: auto; 
+    background-color: var(--cinza-claro);
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 2%;
-    margin-bottom: 50px;
+    margin: 2% auto 50px auto; 
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .voluntariotxt {
     padding-top: 10px;
 }
 
-.sub-butao, .sub-butao-container{
-    display: inline-block;  
-    vertical-align: middle;  /* Alinha verticalmente ao centro */
-    width: 50px;
-    height: auto;
-    display: inline;
-    transition: transform 0.2s;
-    cursor: url('../img/tennis.png'), auto;
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.submit{
+    background-color: var(--roxo);
+    width: 150px;
+    color: var(--branco);
+    text-align: center;
+    
 }
 
-.sub-butao{
-    border: 2px solid #432473;
-    border-radius: 20%;
+.submit:hover{
+    background-color: #a996c7;
+   
 }
 
-.sub-butao:hover {
-    transform: scale(1.1);
+input, textarea {
+    width: 80%;
+    max-width: 600px;  
+    padding: 9px;
+    border-radius: 5px;
+    border: 1px solid var(--cinza-claro);
+    background-color: var(--branco);
+    box-sizing: border-box;
+    margin-bottom: 1px;
 }
+
+
 
 
 footer {

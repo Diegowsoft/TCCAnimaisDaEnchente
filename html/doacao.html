@@ -7,6 +7,10 @@
     <title>Doação</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("GscEl68yS5b4lEZDw"); 
+    </script>
     <link rel="stylesheet" href="../css/paginaDoacao.css">
 
 </head>
@@ -62,11 +66,13 @@
             <h3 class="titulos">PIX</h3>
             <img src="..//img/pix.jpg" alt="Pix dog">
             <P class="paragrafos">Para realizar sua contribuição, você pode utilizar o PIX: 47.437.493/0001-95. Em caso
-                de dúvidas ou se deseja entrar em contato para conversar sobre doações, clique na patinha abaixo.
+                de dúvidas ou se deseja entrar em contato para conversar sobre doações, clique no botão abaixo.
                 Agradecemos muito pelo seu apoio!
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Quero ajudar!&body=Olá, gostaria de contribuir com doações."
-                    target="_blank" title="Envie um e-mail pelo Gmail">
-                    <img src="../img/patas.png" alt="Pata" class="butao">
+                <button class="botao">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Quero ajudar!&body=Olá, gostaria de contribuir com doações."
+                        target="_blank" title="Envie um e-mail pelo Gmail">Enviar
+
+                </button>
                 </a>
             </P>
         </div>
@@ -77,11 +83,11 @@
 
             <p class="paragrafos">Seja um lar temporário para um amigo de quatro patas enquanto ele busca uma família
                 definitiva! Basta ter tempo, carinho e dedicação para cuidar dele. (Os custos com alimentação e saúde
-                são cobertos pelo projeto). Quer ajudar? Clique na patinha e entre em contato conosco!
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Quero ajudar!&body=Olá, gostaria de contribuir com doações."
-                    target="_blank" title="Envie um e-mail pelo Gmail">
-                    <img src="../img/patas.png" alt="Pata" class="butao">
-                </a>
+                são cobertos pelo projeto). Quer ajudar? Clique no botão e entre em contato conosco!
+                <button class="botao"><a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Quero ajudar!&body=Olá, gostaria de contribuir com doações."
+                        target="_blank" title="Envie um e-mail pelo Gmail">Enviar
+                    </a></button>
             </p>
 
         </div>
@@ -92,11 +98,12 @@
             <p class="paragrafos">
                 Ração, brinquedos, medicamentos e outros itens essenciais que garantem o conforto e a saúde dos animais.
                 Cada gesto faz a diferença na vida desses companheiros que tanto precisam de carinho e cuidados. Para
-                contribuir, basta clicar na patinha abaixo e entrar em contato conosco.
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Quero ajudar!&body=Olá, gostaria de contribuir com doações."
-                    target="_blank" title="Envie um e-mail pelo Gmail">
-                    <img src="../img/patas.png" alt="Pata" class="butao">
-                </a>
+                contribuir, basta clicar na botão abaixo e entrar em contato conosco.
+                <button class="botao"><a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Quero ajudar!&body=Olá, gostaria de contribuir com doações."
+                        target="_blank" title="Envie um e-mail pelo Gmail">Enviar
+                    </a>
+                </button>
             </p>
         </div>
 
@@ -106,160 +113,106 @@
         <div class="voluntarios">
             <h3 class="voluntariotxt">Seja voluntário e faça a diferença na vida de nossos peludos!</h3>
             <p class="voluntariotxt">
-                Estamos em busca de pessoas dispostas a doar seu tempo e dedicação para ajudar em diversas atividades. 
+                Estamos em busca de pessoas dispostas a doar seu tempo e dedicação para ajudar em diversas atividades.
                 Para mais informações, clique na patinha e preencha o formulário!
             </p>
-    
-            <!-- Botão com a patinha que abre o modal -->
-            <div class="voluntarios d-flex justify-content-center">
-                <div class="sub-butao-container" data-bs-toggle="modal" data-bs-target="#formModal">
-                    <img src="../img/patas.png" alt="Pata" class="sub-butao">
-                </div>
+
+
+
+            <!-- Formulário -->
+            <section id="form-section">
+
+                <form id="contact-form">
+                    <label for="voluntario-nome">Nome:</label>
+                    <input type="text" id="voluntario-nome" name="voluntario_nome" placeholder="Nome Sobrenome"
+                        required> <br>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email_voluntario" placeholder="Seu e-mail" required> <br>
+
+                    <label for="age">Idade:</label>
+                    <input type="number" id="age" name="idade" placeholder="Exemplo: 22" required> <br>
+
+                    <label for="phone">Contato:</label>
+                    <input type="tel" id="phone" name="numero_contato" placeholder="(11)90000-0000" required> <br>
+
+                    <label for="experiencia">Experiência:</label>
+                    <input type="text" id="experiencia" name="experiencia_voluntario"
+                        placeholder="Descreva sua experiência" required> <br>
+
+                    <label for="message">Disponibilidade</label>
+                    <textarea id="message" name="mensagem" placeholder="Dia da semana, período"></textarea> <br>
+
+                    <input type="submit" value="Enviar" class="submit">
+                </form>
+
+            </section>
+
+            <script>
+                document.getElementById("contact-form").addEventListener("submit", function (e) {
+                    e.preventDefault();
+
+                    const serviceID = "service_2fj6p6a";
+                    const templateID = "template_muernmb";
+
+                    emailjs.sendForm(serviceID, templateID, this)
+                        .then(
+                            () => alert("E-mail enviado com sucesso!"),
+                            (error) => alert("Erro ao enviar o e-mail: " + error.text)
+                        );
+                });
+
+            </script>
+
+        </div>
+
+        <!-- vlibras -->
+
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
             </div>
-    
-            <!-- Modal/Formulário -->
-            <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="formModalLabel">Formulário de Voluntariado</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="volunteerForm" action="https://api.staticforms.xyz/submit" method="POST">
-                                <label for="email">E-mail:</label>
-                                <input type="email" id="email" name="email" class="form-control" required><br>
-    
-                                <label for="data-nascimento">Data de nascimento:</label>
-                                <input type="date" id="data-nascimento" name="data-nascimento" class="form-control" required><br>
-    
-                                <label for="whatsapp">Seu WhatsApp:</label>
-                                <input type="tel" id="whatsapp" name="whatsapp" class="form-control" placeholder="(11) 90000-000" required><br>
-    
-                                <fieldset>
-                                    <legend>Experiência Voluntária</legend>
-                                    <label>
-                                        <input type="radio" name="experiencia-voluntaria" value="nunca" required>
-                                        Nunca participei de trabalhos voluntários
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="experiencia-voluntaria" value="ja-sou">
-                                        Já fui ou sou voluntário
-                                    </label><br>
-                                    <textarea id="experiencia-anterior" name="experiencia-anterior" class="form-control" placeholder="Descreva brevemente suas experiências anteriores"></textarea><br>
-                                </fieldset><br>
-    
-                                <fieldset>
-                                    <legend>Habilidades</legend>
-                                    <label>
-                                        <input type="checkbox" name="habilidades[]" value="veterinario">
-                                        Veterinário
-                                    </label><br>
-                                    <label>
-                                        <input type="checkbox" name="habilidades[]" value="administrativo-financeiro">
-                                        Administrativo/financeiro
-                                    </label><br>
-                                    <label>
-                                        <input type="checkbox" name="habilidades[]" value="captacao-recursos">
-                                        Captação de recursos
-                                    </label><br>
-                                    <label>
-                                        <input type="checkbox" name="habilidades[]" value="marketing">
-                                        Marketing
-                                    </label><br>
-                                    <label>
-                                        <input type="checkbox" name="habilidades[]" value="outro">
-                                        Outro (descrever abaixo)
-                                    </label><br>
-                                    <textarea id="outras-habilidades" name="outras-habilidades" class="form-control" placeholder="Descreva brevemente"></textarea><br>
-                                </fieldset><br>
-    
-                                <fieldset>
-                                    <legend>Área de Interesse</legend>
-                                    <label>
-                                        <input type="radio" name="area-interesse" value="evento-adicao" required>
-                                        Evento de adoção
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="area-interesse" value="atuar-dentro-habilidades">
-                                        Atuar dentro das minhas habilidades
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="area-interesse" value="outro">
-                                        Outro (descrever abaixo)
-                                    </label><br>
-                                    <textarea id="area-interesse-descricao" name="area-interesse-descricao" class="form-control" placeholder="Descreva sua área de interesse"></textarea><br>
-                                </fieldset><br>
-    
-                                <label for="disponibilidade">Disponibilidade (dia da semana, período, região, cidade, online ou presencial):</label><br>
-                                <textarea id="disponibilidade" name="disponibilidade" class="form-control" required></textarea><br>
-    
-                                <button type="submit" class="btn btn-success mt-3">Enviar</button>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
 
-                                <input type="hidden" name="accessKey" value="1d91fb8d-b348-42c9-844b-2e6b96c604f3">
-                                
+        <!-- footer -->
 
-                            </form>
 
-                        </div>
-                    </div>
-                </div>
+        <footer>
+            <div class="esquerda">
+                <figure class="linksContato">
+                    <a href="https://www.instagram.com/animaisdaenchente_nh/" target="_blank"><img
+                            src="../img/instagram.png" alt="instagram"></a>
+                    <figcaption><a href="https://www.instagram.com/animaisdaenchente_nh/" target="_blank">instagram</a>
+                    </figcaption>
+                </figure>
+                <figure class="linksContato">
+                    <a href="#" target="_blank"><img src="../img/whatsapp.png" alt="whatsapp"></a>
+                    <figcaption><a href="#" target="_blank">whatsapp</a></figcaption>
+                </figure>
             </div>
-    
-        </div>
-    
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    
-    </section>
 
+            <div class="centro">
+                <img src="../img/logo-removebg-preview.png" alt="logo">
+                <p>Dando voz aos que não tem</p>
+                <p>&copy;2021 Copyright: Todos os direitos reservados</p>
+            </div>
 
-
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-
-
-
-
-    <footer>
-        <div class="esquerda">
-            <figure class="linksContato">
-                <a href="https://www.instagram.com/animaisdaenchente_nh/" target="_blank"><img
-                        src="../img/instagram.png" alt="instagram"></a>
-                <figcaption><a href="https://www.instagram.com/animaisdaenchente_nh/" target="_blank">instagram</a>
-                </figcaption>
-            </figure>
-            <figure class="linksContato">
-                <a href="#" target="_blank"><img src="../img/whatsapp.png" alt="whatsapp"></a>
-                <figcaption><a href="#" target="_blank">whatsapp</a></figcaption>
-            </figure>
-        </div>
-
-        <div class="centro">
-            <img src="../img/logo-removebg-preview.png" alt="logo">
-            <p>Dando voz aos que não tem</p>
-            <p>&copy;2021 Copyright: Todos os direitos reservados</p>
-        </div>
-
-        <div class="direita">
-            <ol>
-                <li>Diego F.</li>
-                <li>Gabriel B.</li>
-                <li>Guilherme F.</li>
-                <li>Isabela M.</li>
-                <li>Larissa V.</li>
-                <li>Leticia S.</li>
-            </ol>
-        </div>
-    </footer>
+            <div class="direita">
+                <ol>
+                    <li>Diego F.</li>
+                    <li>Gabriel B.</li>
+                    <li>Guilherme F.</li>
+                    <li>Isabela M.</li>
+                    <li>Larissa V.</li>
+                    <li>Leticia S.</li>
+                </ol>
+            </div>
+        </footer>
 </body>
 
 </html>
