@@ -69,8 +69,8 @@
                 de dúvidas ou se deseja entrar em contato para conversar sobre doações, clique no botão abaixo.
                 Agradecemos muito pelo seu apoio!
                 <button class="botao">
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Quero ajudar!&body=Olá, gostaria de contribuir com doações." a class="a"
-                        target="_blank" title="Envie um e-mail pelo Gmail">Enviar
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=animaisdaenchente01@gmail.com&su=Quero ajudar!&body=Olá, gostaria de contribuir com doações."
+                        a class="a" target="_blank" title="Envie um e-mail pelo Gmail">Enviar
 
                 </button>
                 </a>
@@ -144,26 +144,54 @@
 
         </section>
 
-        <script>
-            document.getElementById("contact-form").addEventListener("submit", function (e) {
-                e.preventDefault();
-
-                const serviceID = "service_2fj6p6a";
-                const templateID = "template_muernmb";
-
-                emailjs.sendForm(serviceID, templateID, this)
-                    .then(
-                        () => alert("E-mail enviado com sucesso!"),
-                        (error) => alert("Erro ao enviar o e-mail: " + error.text)
-                    );
-            });
-
-        </script>
 
     </div>
 
-    <!-- vlibras -->
+    <!-- footer -->
 
+    <footer id="footer">
+
+        <div id="contatos">
+            <p>Siga-nos e faça parte da nossa história:</p>
+            <div class="botao-contato">
+                <a href="https://www.instagram.com/animaisdaenchente_nh" target="_blank"><button><img
+                            src="../img/instagram (2).png" alt=""></button></a>
+                <a href="https://www.facebook.com/people/Animais-da-Enchente-NH/61564822771007/"
+                    target="_blank"><button><img src="../img/facebook.png" alt=""></button></a>
+                <a href="https://chat.whatsapp.com/LAT7UbUaJypATRDAIoAEFq" target="_blank"><button><img
+                            src="../img/whatsapp.png" alt=""></button></a>
+            </div>
+        </div>
+
+        <figure><img src="../img/logo-removebg-preview.png" alt="logo cliente"></figure>
+
+        <div class="linksnav">
+            <a href="../index.html">Home</a>
+            <a href="./doacao.html">Contribuição</a>
+            <a href="./paginaAdocao.html">Adoção</a>
+            <a href="./reencontro.html">Reencontro</a>
+            <a href="./quizpag.html">Quiz</a>
+        </div>
+    </footer>
+
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const serviceID = "service_2fj6p6a";
+            const templateID = "template_muernmb";
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(
+                    () => alert("E-mail enviado com sucesso!"),
+                    (error) => alert("Erro ao enviar o e-mail: " + error.text)
+                );
+        });
+
+    </script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/PrabothCharith/accessibility-plugin@main/accessibility-menu.min.js"></script>
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -174,47 +202,6 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
-    <!-- footer -->
-
-
-    <footer id="footer">
-
-        <div id="contatos">
-          <p>Siga-nos e faça parte da nossa história:</p>
-          <div class="botao-contato">
-            <a href="https://www.instagram.com/animaisdaenchente_nh" target="_blank"><button><img
-                  src="../img/instagram (2).png" alt=""></button></a>
-            <a href="https://www.facebook.com/people/Animais-da-Enchente-NH/61564822771007/" target="_blank"><button><img
-                  src="../img/facebook.png" alt=""></button></a>
-            <a href="https://chat.whatsapp.com/LAT7UbUaJypATRDAIoAEFq" target="_blank"><button><img
-                  src="../img/whatsapp.png" alt=""></button></a>
-          </div>
-        </div>
-    
-        <figure><img src="../img/logo-removebg-preview.png" alt="logo cliente"></figure>
-    
-        <div class="linksnav">
-          <a href="../index.html">Home</a>
-          <a href="./doacao.html">Contribuição</a>
-          <a href="./paginaAdocao.html">Adoção</a>
-          <a href="./reencontro.html">Reencontro</a>
-          <a href="./quizpag.html">Quiz</a>
-        </div>
-      </footer>
-    
-
-        <script src="https://cdn.jsdelivr.net/gh/PrabothCharith/accessibility-plugin@main/accessibility-menu.min.js"></script>
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-              <div class="vw-plugin-top-wrapper"></div>
-            </div>
-          </div>
-          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-          <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-          </script>
 </body>
 
 </html>
