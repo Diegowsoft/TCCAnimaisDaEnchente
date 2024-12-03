@@ -5,158 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Inicial - Quiz pet</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-            background-color: #faf8f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-sizing: border-box;
-            cursor: url('../img/cursopata.png'), auto;
-            
-        }
-
-        .container {
-            width: 100%;
-            max-width: 400px;
-            height: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: url('../img/cursopata.png'), auto;
-        }
-
-        .card {
-            background-color: #e0e0e0;
-            border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 100%;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            cursor: url('../img/cursopata.png'), auto;
-        }
-
-        .logo-img {
-            max-width: 50%;
-            height: auto;
-            margin-bottom: 20px;
-            cursor: url('../img/cursopata.png'), auto;
-        }
-
-        h1 {
-            font-family: 'Courgette', cursive;
-            font-size: 2rem;
-            color: #432473;
-            margin-bottom: 20px;
-        }
-
-        p.description {
-            font-size: 1rem;
-            color: #333;
-            margin-bottom: 30px;
-            line-height: 1.5;
-        }
-
-        .start-button {
-            background-color: #432473;
-            color: white;
-            padding: 15px;
-            border-radius: 30px;
-            font-size: 1.2rem;
-            width: 100%;
-            max-width: 300px;
-            transition: background-color 0.2s ease;
-            text-transform: uppercase;
-            text-align: center;
-            border: none;
-            cursor: url('../img/cursopata.png'), auto;
-        }
-
-        .start-button a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            width: 100%;
-            height: 100%;
-            cursor: url('../img/cursopata.png'), auto;
-        }
-
-        .start-button:hover {
-            background-color: #7957ac;
-            cursor: url('../img/cursopata.png'), auto;
-        }
-
-        .start-button a:hover {
-            color: white;
-            cursor: url('../img/cursopata.png'), auto;
-        }
-
-        @media (max-width: 400px) {
-            .container {
-                padding: 15px;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            p.description {
-                font-size: 0.9rem;
-            }
-
-            .start-button {
-                padding: 12px;
-                font-size: 1rem;
-            }
-
-            .logo-img {
-                max-width: 80px;
-            }
-        }
-
-        #button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            background-color: #432473;
-            color: white;
-            width: 70px;
-            height: 40px;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: background-color 0.3s ease;
-            cursor: url('../img/cursopata.png'), auto;
-        }
-
-        #button:hover {
-            background-color: #7957ac;
-            cursor: url('../img/cursopata.png'), auto;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/quizpag.css">
 </head>
 
 <body>
-    <a href="../index.html" id="button">Home</a>
     <section>
         <div class="container card">
             <img src="../img/foto-logo.png" alt="Logo" class="logo-img">
@@ -164,7 +16,9 @@
             <p class="description">Descubra o cachorrinho que mais combina com o seu estilo de vida e personalidade.
                 Responda ao quiz e explore as opções para encontrar um companheiro ideal que traga alegria e amor para o
                 seu dia a dia!</p>
-            <button class="start-button"><a href="../html/quizz.html">Iniciar</a></button>
+            <a  href="../html/quizz.html"><button class="button">Iniciar</button></a>
+            <a href="../index.html"><button class="button">Home</button></a>
+
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/gh/PrabothCharith/accessibility-plugin@main/accessibility-menu.min.js"></script>

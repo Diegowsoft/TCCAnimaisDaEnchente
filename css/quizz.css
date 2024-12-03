@@ -22,7 +22,7 @@ body, html {
 
 .app-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@ body, html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
-    max-width: 400px; 
+    max-width: 450px; 
     min-height: 500px; 
     display: flex;
     flex-direction: column;
@@ -185,86 +185,31 @@ h3 {
     height: 100%;
 }
 
-/* Estilos adicionais para responsividade */
-@media (max-width: 768px) {
+/* Quebra de linha para dispositivos extra pequenos (0-480px) */
+@media (max-width: 480px) {
     .app-container {
-        padding: 15px;
-    }
-
-    .card {
-        padding: 15px;
-        justify-content: center;
-        max-width: 350px; /* Tamanho ajustado */
-        max-height: 450px; /* Altura ajustada */
-    }
-
-    h3 {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-    }
-
-    .option {
-        padding: 12px;
-        font-size: 16px;
-    }
-
-    .result-image {
-        width: 100px;
-        height: 100px;
-    }
-
-    .result-area {
-        font-size: 20px;
-    }
-
-    #restart {
-        padding: 10px;
-        font-size: 16px;
+        margin: 20px;
     }
 }
 
-@media (max-width: 400px) {
-    .app-container {
-        padding: 15px;
-    }
-
-    .card {
-        padding: 15px;
-        justify-content: center;
-        max-width: 300px;
-        max-height: 400px;
-        height: 400px;
-    }
-
-    h3 {
-        font-size: 1.6rem;
+/* Breakpoint de 481px a 768px (para dispositivos médios) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .question {
+        font-size: 30px;
     }
 
     .option {
-        padding: 10px;
-        font-size: 14px;
+        font-size: 25px;
+    }
+}
+
+/* Breakpoint de 769px a 1279px (telas médias) */
+@media (min-width: 769px) and (max-width: 1280px) {
+    .question {
+        font-size: 30px;
     }
 
-    .result-image {
-        width: 80px;
-        height: 80px;
-    }
-
-    .result-area {
-        font-size: 18px;
-    }
-
-    #restart {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .start-button {
-        padding: 12px;
-        font-size: 16px;
-    }
-
-    .logo-img {
-        max-width: 80px;
+    .option {
+        font-size: 25px;
     }
 }

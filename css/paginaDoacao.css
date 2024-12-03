@@ -67,6 +67,7 @@ main p {
     display: flex;
     margin: 0 40px;
     gap: 20px;
+    place-items: center;
 }
 
 article div {
@@ -111,7 +112,6 @@ article img {
     height: 40px;
     background-color: var(--roxo);
     color: var(--branco);
-    display: block;
     margin: 20px auto 0;
     transition: transform 0.2s;
     cursor: url('../img/cursopata.png'), auto;
@@ -155,10 +155,7 @@ article img {
 #mensagem {
 
     margin-top: -35px;
-    color: #44247394;
-
-
-    
+    color: #44247394;    
 }
 
 .a {
@@ -170,7 +167,6 @@ article img {
 .a:hover {
     background-color: #a996c7;
     cursor: url('../img/cursopata.png'), auto;
-    
 }
 
 
@@ -181,7 +177,7 @@ article img {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 2%;
-    padding: 20px;
+    padding: 20px 20px 0;
     cursor: url('../img/cursopata.png'), auto;
     
 }
@@ -207,9 +203,6 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
-
 }
 
 .submit {
@@ -241,8 +234,69 @@ textarea {
 
 }
 
+#topo {
+    display: flex;
+    max-width: 150px;
+    justify-self: flex-end;
+}
 
-
+.button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+  
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+  
+.svgIcon path {
+    fill: white;
+}
+  
+.button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(20, 20, 20);
+    align-items: center;
+}
+  
+.button:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+}
+  
+.button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Voltar ao topo";
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+}
+  
+.button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+}
 
 footer {
     min-height: 15vh;
@@ -314,4 +368,143 @@ footer figure img {
 #contatos .botao-contato button:hover {
     transform: scale(1.2);
     transition: all ease-in-out 0.3s;
+}
+
+/* ===============MEDIA QUERY=============== */
+
+/* Quebra de linha para dispositivos extra pequenos (0-480px) */
+@media (max-width: 480px) {
+    #cards {
+        flex-direction: column;
+    }
+    
+    .cards {
+        border-radius: 30px;
+    }
+
+    .pix {
+        padding: 40px;
+    }
+    
+    .doe_mantimentos {
+        margin-bottom: 10px;
+    }
+
+    /* ===============BOTAO VOLTAR AO TOPO=============== */
+    .button:hover {
+        width: 40px;
+        transition: none;
+    }
+
+    .button:hover .svgIcon {
+        transform: none;
+        transition: none;
+    }
+
+    .button:hover::before {
+        font-size: 0;
+        opacity: 0;
+        transition: none;
+    }
+
+    /* ===============FOOTER=============== */
+    footer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    footer figure {
+        order: -1;
+        margin-top: 20px;
+    }
+}
+
+/* Breakpoint de 481px a 768px (para dispositivos médios) */
+@media (min-width: 481px) and (max-width: 768px) {
+    #cards {
+        flex-direction: column;
+    }
+
+    .cards {
+        width: 500px;
+    }
+    
+    .pix {
+        padding: 40px;
+    }
+    
+    .doe_mantimentos {
+        margin-bottom: 10px;
+    }
+
+    /* ===============BOTAO VOLTAR AO TOPO=============== */
+    .button:hover {
+        width: 40px;
+        transition: none;
+    }
+
+    .button:hover .svgIcon {
+        transform: none;
+        transition: none;
+    }
+
+    .button:hover::before {
+        font-size: 0;
+        opacity: 0;
+        transition: none;
+    }
+
+    /* ===============FOOTER=============== */
+    footer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    footer figure {
+        order: -1;
+        margin-top: 20px;
+    }
+}
+
+/* Breakpoint de 769px a 1279px (telas médias) */
+@media (min-width: 769px) and (max-width: 1280px) {
+    .cards {
+        border-radius: 30px;
+        height: 600px;
+    }
+
+    .cards img {
+        height: 200px;
+    }
+
+    /* ===============FOOTER=============== */
+    footer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    footer figure {
+        order: -1;
+        margin-top: 20px;
+    }
+
+    /* ===============BOTAO VOLTAR AO TOPO=============== */
+    .button:hover {
+        width: 40px;
+        transition: none;
+    }
+
+    .button:hover .svgIcon {
+        transform: none;
+        transition: none;
+    }
+
+    .button:hover::before {
+        font-size: 0;
+        opacity: 0;
+        transition: none;
+    }
 }
