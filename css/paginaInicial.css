@@ -39,10 +39,6 @@ nav .collapse ul li a:hover {
     cursor: url('../img/cursopata.png'), auto;
 }
 
-
-main {
-    padding-bottom: 80px;
-}
 /*=============== CARD ===============*/
 .cards-container {
     display: flex;
@@ -373,7 +369,69 @@ p {
     cursor: url('../img/cursopata.png'), auto;
 }
 
+#topo {
+    display: flex;
+    max-width: 150px;
+    justify-self: flex-end;
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
   
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+  
+.svgIcon path {
+    fill: white;
+}
+  
+.button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(20, 20, 20);
+    align-items: center;
+}
+  
+.button:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+}
+  
+.button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Voltar ao topo";
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+}
+  
+.button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+}
 
 /* ================FOOTER================ */
 
@@ -483,6 +541,23 @@ footer figure img {
         width: 100%;
     }
 
+    /* ===============BOTAO VOLTAR AO TOPO=============== */
+    .button:hover {
+        width: 40px;
+        transition: none;
+    }
+
+    .button:hover .svgIcon {
+        transform: none;
+        transition: none;
+    }
+
+    .button:hover::before {
+        font-size: 0;
+        opacity: 0;
+        transition: none;
+    }
+
     /* ===============FOOTER=============== */
     footer {
         display: flex;
@@ -551,6 +626,23 @@ footer figure img {
         max-width: 400px;
     }
 
+    /* ===============BOTAO VOLTAR AO TOPO=============== */
+    .button:hover {
+        width: 40px;
+        transition: none;
+    }
+
+    .button:hover .svgIcon {
+        transform: none;
+        transition: none;
+    }
+
+    .button:hover::before {
+        font-size: 0;
+        opacity: 0;
+        transition: none;
+    }
+
     /* ===============FOOTER=============== */
     footer {
         display: flex;
@@ -614,7 +706,24 @@ footer figure img {
     /* ===============PERGUNTAS FREQUENTES=============== */
     .faq-img {
         width: 500px;
-    }    
+    }
+
+    /* ===============BOTAO VOLTAR AO TOPO=============== */
+    .button:hover {
+        width: 40px;
+        transition: none;
+    }
+
+    .button:hover .svgIcon {
+        transform: none;
+        transition: none;
+    }
+
+    .button:hover::before {
+        font-size: 0;
+        opacity: 0;
+        transition: none;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1050px) {

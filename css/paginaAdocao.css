@@ -100,8 +100,8 @@ h2{
     max-width: 1100px;
     min-width: 1000px;
     margin: 0 30px;
-    max-height: 750px;
-    padding: 10px 0;
+    max-height: 710px;
+    padding: 20px;
     overflow: hidden;
 }
 
@@ -116,10 +116,11 @@ h2{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: none;
     transition: transform 0.3s ease;
+    width: 275px;
 }
 
 .card img {
-    height: 350px;
+    height: 325px;
     border-radius: 10px;
     
 }
@@ -208,7 +209,6 @@ h2{
     left: -30px;
 }
 
-
 #topo {
     display: flex;
     max-width: 150px;
@@ -271,7 +271,7 @@ h2{
     bottom: unset;
     /* transform: translateY(-30px); */
     transition-duration: 0.3s;
-}  
+}
 
 /* ================FOOTER================ */
 
@@ -355,21 +355,27 @@ footer figure img {
         grid-template-columns: 1fr;
         place-items: center;
         overflow: hidden;
-        max-height: 1200px;
+        max-height: 900px;
     }
     
     .card {
-        width: 300px;
+        width: 225px;
     }
     
     .card img {
-        height: 375px;
+        height: 275px;
+    }
+
+    .overlay {
+        font-size: 13px;
+        padding: 5px;
     }
     
     .card-container.show-more {
-        max-height: 2390px;
+        max-height: 1790px;
     }
 
+    /* ===============BOTAO VOLTAR AO TOPO=============== */
     .button:hover {
         width: 40px;
         transition: none;
@@ -401,6 +407,34 @@ footer figure img {
 
 /* Breakpoint de 481px a 768px (para dispositivos médios) */
 @media (min-width: 481px) and (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+        place-items: center;
+        overflow: hidden;
+        max-height: 1125px;
+    }
+    
+    .card {
+        width: 275px;
+    }
+    
+    .card img {
+        height: 350px;
+    }
+
+    .overlay {
+        padding: 5px;
+    }
+    
+    .card-container.show-more {
+        max-height: 2230px;
+    }
+    
+    .card .overlay button img {
+    height: 35px;
+    }
+
+    /* ===============BOTAO VOLTAR AO TOPO=============== */
     .button:hover {
         width: 40px;
         transition: none;
@@ -431,10 +465,61 @@ footer figure img {
 }
 
 /* Breakpoint de 769px a 1279px (telas médias) */
-@media (min-width: 769px) and (max-width: 1279px) {
+@media (min-width: 769px) and (max-width: 1280px) {
     .card-container {
         grid-template-columns: repeat(2, 1fr);
+        max-width: 80%;
+        margin: 0 auto;
         place-items: center;
-        overflow: hidden;
+        max-height: 1275px;
+    }   
+
+    .card {
+        width: 300px;
+    }
+
+    .card img {
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .card .overlay button {
+        padding: 5px;
+    }
+
+    .card .overlay button img {
+        height: 35px;
+    }
+
+    .card .overlay {
+        padding: 20px;
+    }
+
+    .card-container.show-more {
+        max-height: 2560px;
+    }
+
+    /* ===============BOTAO VER MAIS=============== */
+    .vermais {
+        width: 6em;
+        height: 3em;
+        align-items: center;
+    }
+
+    /* ===============BOTAO VOLTAR AO TOPO=============== */
+    .button:hover {
+        width: 40px;
+        transition: none;
+    }
+
+    .button:hover .svgIcon {
+        transform: none;
+        transition: none;
+    }
+
+    .button:hover::before {
+        font-size: 0;
+        opacity: 0;
+        transition: none;
     }
 }
