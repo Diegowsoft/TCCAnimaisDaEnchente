@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         switch (mostFrequentAnswer) {
             case "a":
-                result.area = "Calma e Tranquilo";
+                result.area = "Calmo e Tranquilo";
                 result.image = "../img/calmo.jpg";
                 result.extraImages = ["../img/fotoquiz4.png", "../img/fotoquiz5.png", "../img/fotoquiz6.png"];
                 break;
