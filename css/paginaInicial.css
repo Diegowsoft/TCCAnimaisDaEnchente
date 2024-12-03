@@ -73,11 +73,12 @@ nav .collapse ul li a:hover {
     width: 100%; 
     height: auto;
     border-radius: 8px; 
-    transition: transform 0.1s ease; 
+    transition: .3s ease-in-out; 
 }
 
 .card-image img:hover {
     transform: scale(1.1); /* Zoom da imagem */
+    transition: .3s ease-in-out;
 }
 
 .card-titulo {

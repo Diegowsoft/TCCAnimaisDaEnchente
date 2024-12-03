@@ -27,7 +27,7 @@ body {
 h1 {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     text-align: center;
-    margin: 10px 0; 
+    margin: 10px 0;
     font-size: 30px;
 }
 
@@ -37,66 +37,87 @@ span {
 
 #form-section {
     width: 100%;
-    max-width: 500px;  
-    margin: 0 auto;  
-    padding: 20px;
+    max-width: 500px;
+    margin: 15px auto;
+    padding: 10px 20px;
+    background-color: var(--cinza-claro);
+    border-radius: 20px;
 }
 
 #form-section h1 {
     color: var(--roxo);
-    margin-bottom: 30px;  
+    margin-bottom: 30px;
 }
 
 #contact-form {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
     width: 100%;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
-    max-width: 500px;  
+    max-width: 500px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid var(--cinza-claro);
     margin-bottom: 8px;
-    background-color: var(--cinza-claro);
+    background-color: var(--branco);
     text-align: left;
     cursor: url('../img/cursopata.png'), auto;
 }
 
-.submit{
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submit {
     background-color: var(--roxo);
-    width: 90px;
+    width: 100px;
+    height: 40px;
     color: var(--branco);
     text-align: center;
-    
+    font-size: 18px;
 }
 
-.submit:hover{
+.submit:hover {
     background-color: #a996c7;
-   
+
 }
 
-button{
-    width: 90px;
-    height: 37px;
+button {
+    width: 100px;
+    height: 40px;
     border-radius: 5px;
     color: var(--branco);
     background-color: var(--roxo);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     border: 1px solid var(--cinza-claro);
     text-decoration: none;
-    float: inline-end;
+    font-size: 18px;
 }
-button:hover{
-        background-color: #a996c7;
-        cursor: url('../img/cursopata.png'), auto;
-           }
 
-    a{
-        color: var(--branco);
-        text-decoration: none;
-        cursor: url('../img/cursopata.png'), auto;
+button:hover {
+    background-color: #a996c7;
+    cursor: url('../img/cursopata.png'), auto;
+}
+
+/* Quebra de linha para dispositivos extra pequenos (0-480px) */
+@media (max-width: 480px) {
+    #form-section {
+        width: 90%;
     }
-     
+}
+
+/* Breakpoint de 481px a 768px (para dispositivos médios) */
+@media (min-width: 481px) and (max-width: 768px) {
+    
+}
+
+/* Breakpoint de 769px a 1279px (telas médias) */
+@media (min-width: 769px) and (max-width: 1280px) {
+    
+}
