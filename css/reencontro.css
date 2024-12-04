@@ -142,28 +142,31 @@ h1, h2, p {
     display: flex;
     gap: 20px;
     justify-content: center;
-    flex-wrap: wrap; /* Para melhor adaptação em telas menores */
+    flex-wrap: wrap;
 }
 
 .card {
     position: relative;
     width: 300px;
-    height: auto; /* Permitir altura dinâmica */
+    height: auto;
     background-color: var(--cinza-claro);
     border-radius: 8px;
     overflow: hidden;
 }
 
 .card video {
-    width: 100%;
-    height: auto; /* Manter a proporção do vídeo */
-    object-fit: cover;
     cursor: url('../img/cursopata.png'), auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block; /* Remove qualquer espaçamento adicional */
+    background-color: var(--cinza-claro);
 }
 
 .card .overlay {
     position: absolute;
-    bottom: 55px;
+    bottom: 57px;
     left: 10px;
     right: 10px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -232,16 +235,19 @@ h1, h2, p {
 @media (max-width: 768px) {
     .card-container {
         flex-direction: column; /* Exibir cards em coluna */
-        gap: 30px; /* Espaçamento maior entre os cards */
+        gap: 30px;
         align-items: center;
     }
 
     .card {
-        width: 90%; /* Ocupar quase toda a largura da tela */
+        width: 90%; /* Ocupa quase toda a largura da tela */
     }
 
     .card video {
-        height: auto; /* Manter a proporção */
+        height: auto; /* Mantem a proporção */
+    }
+    #form input {
+        width: 80%;
     }
 }
 
@@ -406,7 +412,8 @@ footer {
 .linksnav {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    margin: 10px 0;
+    width: 300px;
     align-items: center;
 }
 
@@ -415,7 +422,6 @@ footer {
     text-decoration: none;
     font-size: 1.15rem;
     font-weight: bold;
-    cursor: url('../img/cursopata.png'), auto;
 }
 
 .linksnav a:hover {
@@ -428,30 +434,53 @@ footer figure img {
     height: 150px;
 }
 
-.botao-contato {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 200px;
+#contatos {
+    width: 300px;
 }
 
-.botao-contato img {
-    height: 50px;
+#contatos p {
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
     cursor: url('../img/cursopata.png'), auto;
+}
+
+#contatos .botao-contato {
+    display: flex;
+    justify-content: center;
     
 }
 
-.botao-contato button {
+#contatos .botao-contato img {
+    height: 50px;
+    cursor: url('../img/cursopata.png'), auto;
+}
+
+#contatos .botao-contato button {
     border: none;
     background-color: transparent;
     padding: 10px;
     display: flex;
     border-radius: 50%;
+    transition: all ease-in-out 0.3s;
     cursor: url('../img/cursopata.png'), auto;
 }
 
-.botao-contato button:hover {
+#contatos .botao-contato button:hover {
     transform: scale(1.2);
-    transition: ease-in-out 0.3s;
-    cursor: url('../img/cursopata.png'), auto;
+    transition: all ease-in-out 0.3s;
+}
+
+/* Breakpoint 768px para dispositivos médios */
+@media (max-width: 768px) {
+footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+footer figure {
+    order: -1;
+    margin-top: 20px;
+}
 }
