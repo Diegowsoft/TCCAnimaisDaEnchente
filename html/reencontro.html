@@ -37,7 +37,7 @@
             <div class="content text-center">
                 <h1>Reencontro de Animais Perdidos</h1>
                 <p>Ajude a reunir famílias e seus amigos de quatro patas resgatados após a enchente de abril de 2024.</p>
-                <a href="#search" class="btn">Reencontre o seu amiguinho peludo</a>
+                <a href="#" id="botaoParaDescer" class="btn">Reencontre o seu amiguinho peludo</a>
             </div>
         </div>
     </section>
@@ -48,7 +48,7 @@
         <h2><span class="amarelo">Resgates</span> emocionantes</h2>
         <div class="card-container">
             <div class="card">
-                <video poster="../img/resgate-1.jpg" width="100%" height="250px" controls>
+                <video poster="../img/resgate-1.jpg" controls>
                     <source src="../img/resgate-1.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
                 </video>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="card">
-                <video poster="../img/resgate-2.jpg" width="100%" height="250px" controls>
+                <video poster="../img/resgate-2.jpg" controls>
                     <source src="../img/resgate-2.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
                 </video>
@@ -68,7 +68,7 @@
                 </div>
             </div>
             <div class="card">
-                <video poster="../img/resgate-3.jpg" width="100%" height="250px" controls>
+                <video poster="../img/resgate-3.jpg" controls>
                     <source src="../img/resgate-3.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
                 </video>
@@ -85,7 +85,7 @@
         <h2><span class="amarelo">Reencontros</span> que aquecem o coração</h2>
         <div class="card-container">
             <div class="card">
-                <video poster="../img/reencontro-1.jpg" width="100%" height="250px" controls>
+                <video poster="../img/reencontro-1.jpg" controls>
                     <source src="../img/reencontro-1.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
                 </video>
@@ -95,7 +95,7 @@
                 </div>
             </div>
             <div class="card">
-                <video poster="../img/reencontro-2.jpg" width="100%" height="250px" controls>
+                <video poster="../img/reencontro-2.jpg" controls>
                     <source src="../img/reencontro-2.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
                 </video>
@@ -105,7 +105,7 @@
                 </div>
             </div>
             <div class="card">
-                <video poster="../img/reencontro-3.jpg" width="100%" height="250px" controls>
+                <video poster="../img/reencontro-3.jpg" controls>
 
                     <source src="../img/reencontro-3.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
@@ -116,7 +116,6 @@
                 </div>
             </div>
         </div>
-        <button class="vermais">Ver Mais</button>
     </section>
 
     <!--EMPRESAS PATROCINADORAS / MARCAS PATROCINADORAS-->
@@ -155,18 +154,62 @@
 
 
     <!-- Form Section -->
-    <section id="form">
-        <h2>Reencontre <span class="amarelo">o seu pet!</span> Preencha o formulário</h2>
-        <form action="mailto:animaisdaenchentenh@gmail.com" method="POST" enctype="multipart/form-data" class="contact-form">
-            <input type="text" name="nome_dono" placeholder="Nome do dono" required>
-            <input type="text" name="nome_cachorro" placeholder="Nome do cachorro" required>
-            <input type="tel" name="telefone" placeholder="Número de telefone" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="text" name="cep" placeholder="CEP" required>
-            <input type="number" name="numero_casa" placeholder="Número da Casa" required>
-            <input type="text" name="complemento" placeholder="Complemento (opcional)">
-            <button type="submit" class="vermais">Enviar</button>
-        </form>
+    <!-- Formulário para enviar as imagens -->
+<section id="form">
+    <h2>Reencontre <span class="amarelo">o seu pet!</span> Preencha o formulário</h2>
+    <form id="form" action="mailto:animaisdaenchentenh@gmail.com" method="POST" enctype="multipart/form-data" class="contact-form">
+        <h2 class="form-title">Reencontre Seu Pet</h2>
+        <input type="text" name="nome_dono" placeholder="Nome do dono" required>
+        <input type="text" name="nome_cachorro" placeholder="Nome do cachorro" required>
+        <input type="tel" name="telefone" placeholder="Número de telefone" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="cep" placeholder="CEP" required>
+        <input type="number" name="numero_casa" placeholder="Número da Casa" required>
+        <input type="text" name="complemento" placeholder="Complemento (opcional)">
+        
+        <!-- Campo para upload de imagens -->
+        <div class="file-upload">
+            <label for="uploadFoto" class="file-label">
+                <span class="file-text">Clique para enviar até 10 fotos do seu pet</span>
+                <input type="file" id="uploadFoto" name="foto_pet" accept="image/*" multiple>
+            </label>
+        </div>
+    
+        <!-- Pré-visualização das imagens -->
+        <div id="previewContainer" class="preview-container" style="display: none;"></div>
+    
+        <button type="submit" class="btn-submit">Enviar</button>
+    </form>
+    
+    <!-- Mensagem de sucesso após envio -->
+    <div id="successMessage" class="success-message" style="display: none;">
+        <span class="success-icon">✔️</span>
+        <p class="success-text">O e-mail foi enviado com sucesso e entraremos em contato em breve!</p>
+    </div>
+    
+    
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <a href="#" id="topo">
             <button class="button">
               <svg class="svgIcon" viewBox="0 0 384 512">
@@ -205,7 +248,11 @@
       <a href="./quizpag.html">Quiz</a>
     </div>
   </footer>
+    <!-- UPLOAD IMAGEM -->
+    <script src="../js/uploadImagem.js"></script>
 
+    <!-- SCROLL -->
+  <script src="../js/scroll.js"></script>
   <!-- VLibras -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
