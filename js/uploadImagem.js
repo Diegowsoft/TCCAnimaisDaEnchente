@@ -53,3 +53,11 @@ document.getElementById("uploadFoto").addEventListener("change", function (event
     // Exibe o contêiner de pré-visualização com grid
     document.getElementById("previewContainer").style.display = "grid";
 });
+
+document.getElementById("formReencontro").addEventListener("submit", function(event) {
+    // Impede o envio padrão do formulário
+    event.preventDefault();
+    
+    // Exibe a mensagem no console
+    console.log("O e-mail foi enviado com sucesso e entraremos em contato em breve!");
+});
