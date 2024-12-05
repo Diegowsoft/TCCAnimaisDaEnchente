@@ -23,7 +23,7 @@ const questions = [
         options: [
             { text: "Obediência", answer: "a"},
             { text: "Carinho", answer: "b"},
-            { text: "Atividade física", answer: "c"},
+            { text: "Brincalhão", answer: "c"},
             { text: "Proteção", answer: "d"}
         ]
     },
