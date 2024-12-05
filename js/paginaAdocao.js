@@ -102,7 +102,12 @@ createCards(cardData);
 const readMoreBtn = document.querySelector(".vermais");
 const searchInput = document.getElementById('searchInput');
 const noResultsMessage = document.getElementById('noResultsMessage');
-const footer = document.querySelector("#footer")
+const searchButton = document.querySelector("#searchForm")
+
+searchButton.addEventListener('submit', function(event) {
+    // Impede o envio padrão do formulário (que causaria o reload da página)
+    event.preventDefault();
+});
 
 // Função para filtrar e exibir os cards com base no nome
 function filterCards() {

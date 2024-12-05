@@ -59,51 +59,44 @@ main p {
 
 }
 .contribuir{
-        color: var(--amarelo);
+    color: var(--amarelo);
 }
 
 
 #cards {
     display: flex;
     margin: 0 40px;
-    gap: 20px;
-    place-items: center;
+    gap: 30px;
+    justify-content: center;
 }
 
-article div {
+.cards {
     background-color: var(--cinza-claro);
-    flex: 1 1 30%;
-    /* Controla o tamanho de cada div */
     box-sizing: border-box;
-    /* Garante que padding e border sejam incluídos nas dimensões */
     text-align: center;
     border-radius: 10%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 550px;
+    width: 450px;
 }
 
-article img {
+.cards img {
     width: 100%;
     max-width: 150px;
-    height: auto;
+    height: 220px;
     margin: 10px auto;
     border-radius: 20%;
     border: 2px solid #432473;
 }
 
-.lar_temporario {
-    height: 600%;
-    /*div*/
+.titulos {
+    margin: 10px;
 }
 
-.racao {
-    /*img*/
-    height: 40%;
-    width: 80%;
-}
-
-.titulos,
 .paragrafos {
-    margin: 5% 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 50px;
 }
 
 
@@ -141,7 +134,7 @@ article img {
     background-color: var(--roxo);
     color: var(--branco);
     display: block;
-    margin: 20px auto 0;
+    margin: 45px auto 0;
     transition: transform 0.2s;
     cursor: url('../img/cursopata.png'), auto;
     border-radius: 5px;
@@ -153,8 +146,7 @@ article img {
 }
 
 #mensagem {
-
-    margin-top: -35px;
+    margin-top: -15px;
     color: #44247394;    
 }
 
@@ -168,8 +160,6 @@ article img {
     background-color: #a996c7;
     cursor: url('../img/cursopata.png'), auto;
 }
-
-
 
 #voluntarios {
     height: auto;
@@ -190,13 +180,70 @@ article img {
     margin: 10px 0;
     font-size: 30px;
 }
+
 span {
     color: var(--amarelo);
 }
+
 .voluntariop{
     padding-top: 10px;
     font-size: 20px;
+}
+
+/* Estilo para a seção "Marcas que fazem a diferença" */
+.marcas-diferenca {
+    text-align: center;
+    padding: 40px 0;
+    background-color: var(--roxo);
+}
+
+.marcas-diferenca h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--amarelo);
+}
+
+.marcas-diferenca p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: var(--branco);
+}
+
+/* Estilo para o marquee */
+.marquee {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    overflow: hidden; 
+}
+
+.marquee-container {
+    display: flex;
+    flex: 0 0 auto;
+    width: 200%; /* A largura do container deve ser o dobro da tela para garantir a duplicação */
+    animation: marquee 30s linear infinite; /* Animação contínua sem pausas */
+}
+
+.marquee img {
+    width: 200px; 
+    height: auto;
+    transition: transform 0.3s ease;
+    margin-right: 20px;
+}
+
+.marquee img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0); /* Início na posição normal */
     }
+    100% {
+        transform: translateX(-50%); /* Move as imagens para a esquerda até desaparecerem completamente */
+    }
+}
 
 
 #contact-form {
@@ -380,6 +427,7 @@ footer figure img {
     
     .cards {
         border-radius: 30px;
+        width: 100%;
     }
 
     .pix {
@@ -424,6 +472,7 @@ footer figure img {
 @media (min-width: 481px) and (max-width: 768px) {
     #cards {
         flex-direction: column;
+        align-items: center;
     }
 
     .cards {
@@ -470,9 +519,14 @@ footer figure img {
 
 /* Breakpoint de 769px a 1279px (telas médias) */
 @media (min-width: 769px) and (max-width: 1280px) {
+    #cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .cards {
         border-radius: 30px;
-        height: 600px;
+        height: 500px;
     }
 
     .cards img {
