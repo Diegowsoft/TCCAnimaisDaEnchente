@@ -156,11 +156,6 @@ main p {
     cursor: url('../img/cursor_branco.png'), auto;
 }
 
-.a:hover {
-    background-color: #a996c7;
-    cursor: url('../img/cursor_branco.png'), auto;
-}
-
 #voluntarios {
     height: auto;
     background-color: var(--cinza-claro);
@@ -189,62 +184,6 @@ span {
     padding-top: 10px;
     font-size: 20px;
 }
-
-/* Estilo para a seção "Marcas que fazem a diferença" */
-.marcas-diferenca {
-    text-align: center;
-    padding: 40px 0;
-    background-color: var(--roxo);
-}
-
-.marcas-diferenca h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: var(--amarelo);
-}
-
-.marcas-diferenca p {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-    color: var(--branco);
-}
-
-/* Estilo para o marquee */
-.marquee {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    overflow: hidden; 
-}
-
-.marquee-container {
-    display: flex;
-    flex: 0 0 auto;
-    width: 200%; /* A largura do container deve ser o dobro da tela para garantir a duplicação */
-    animation: marquee 30s linear infinite; /* Animação contínua sem pausas */
-}
-
-.marquee img {
-    width: 200px; 
-    height: auto;
-    transition: transform 0.3s ease;
-    margin-right: 20px;
-}
-
-.marquee img:hover {
-    transform: scale(1.1);
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0); /* Início na posição normal */
-    }
-    100% {
-        transform: translateX(-50%); /* Move as imagens para a esquerda até desaparecerem completamente */
-    }
-}
-
 
 #contact-form {
     display: flex;
