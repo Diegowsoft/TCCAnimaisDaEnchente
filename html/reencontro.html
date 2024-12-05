@@ -161,7 +161,7 @@
                 <img src="../img/empresas-patrocinadoras/carrefour.png" alt="Marca 9">
                 <img src="../img/empresas-patrocinadoras/agener.png" alt="Marca 10">
             </div>
-        </div>
+        </div> 
     </section>
 
 
@@ -236,8 +236,23 @@
             <a href="./quizpag.html">Quiz</a>
         </div>
     </footer>
+    <script>
+        document.getElementById("formReencontro").addEventListener("btn-submit", function (e) {
+            e.preventDefault();
+
+            const serviceID = "service_2fj6p6a";
+            const templateID = "template_muernmb";
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(
+                    () => alert("E-mail enviado com sucesso!"),
+                    (error) => alert("Erro ao enviar o e-mail: " + error.text)
+                );
+        });
+
+    </script>   
     <script src="../js/emailjs.js"></script>
-    <!-- UPLOAD IMAGEM -->
+     <!-- UPLOAD IMAGEM -->
     <script src="../js/uploadImagem.js"></script>
 
     <!-- SCROLL -->
