@@ -15,7 +15,7 @@
 
 body {
     background-color: var(--branco);
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 
@@ -29,12 +29,12 @@ nav {
 
 nav .collapse ul li a:hover {
     text-decoration: underline;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 .logo {
     width: 8rem;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 /*===============CONTEUDO===============*/
@@ -46,7 +46,7 @@ nav .collapse ul li a:hover {
     margin: 50px 0;
     color: var(--roxo);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 span {
@@ -83,7 +83,7 @@ h2{
 .search button:hover {
     background-color: var(--amarelo);
     color: var(--roxo);
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 #noResultsMessage {
@@ -178,7 +178,7 @@ h2{
     border: 2px solid var(--roxo);
     border-radius: 6px;
     position: relative;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
   
 .vermais::before {
@@ -193,7 +193,7 @@ h2{
   
 .vermais:hover {
     color: white;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 
 }
   
@@ -281,7 +281,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 .linksnav {
@@ -302,7 +302,7 @@ footer {
 .linksnav a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 footer figure img {
@@ -317,7 +317,7 @@ footer figure img {
     color: var(--branco);
     display: flex;
     justify-content: center;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 #contatos .botao-contato {
@@ -328,7 +328,7 @@ footer figure img {
 
 #contatos .botao-contato img {
     height: 50px;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 #contatos .botao-contato button {
@@ -338,7 +338,7 @@ footer figure img {
     display: flex;
     border-radius: 50%;
     transition: all ease-in-out 0.3s;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 #contatos .botao-contato button:hover {

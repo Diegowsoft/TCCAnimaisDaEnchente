@@ -20,7 +20,7 @@
 body {
     background-color: var(--branco);
     font-family: 'roboto';
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 .bg-custom {
@@ -29,18 +29,18 @@ body {
 
 nav {
     font-size: 1.75rem;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 nav .collapse ul li a:hover {
     text-decoration: underline;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
     
 }
 
 .logo {
     width: 8rem;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
     
 }
 
@@ -107,7 +107,7 @@ main p {
     color: var(--branco);
     margin: 20px auto 0;
     transition: transform 0.2s;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
     border-radius: 5px;
     border: none;
 
@@ -116,7 +116,7 @@ main p {
 .botao:hover {
     background-color: #a996c7;
     transform: scale(1.1);
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 /* Botão copia e cola */
@@ -136,7 +136,7 @@ main p {
     display: block;
     margin: 45px auto 0;
     transition: transform 0.2s;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
     border-radius: 5px;
     border: none;
 }
@@ -153,12 +153,12 @@ main p {
 .a {
     color: var(--branco);
     text-decoration: none;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 .a:hover {
     background-color: #a996c7;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 #voluntarios {
@@ -168,7 +168,7 @@ main p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 2%;
     padding: 20px 20px 0;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
     
 }
 
@@ -257,13 +257,13 @@ span {
     width: 150px;
     color: var(--branco);
     text-align: center;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 
 }
 
 .submit:hover {
     background-color: #a996c7;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 
 }
 
@@ -277,7 +277,7 @@ textarea {
     background-color: var(--branco);
     box-sizing: border-box;
     margin-bottom: 1px;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 
 }
 
@@ -352,7 +352,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 .linksnav {
@@ -368,13 +368,13 @@ footer {
     text-decoration: none;
     font-size: 1.15rem;
     font-weight: bold;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 .linksnav a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 footer figure img {
@@ -383,7 +383,7 @@ footer figure img {
 
 #contatos {
     width: 300px;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 #contatos p {
@@ -395,7 +395,7 @@ footer figure img {
 #contatos .botao-contato {
     display: flex;
     justify-content: center;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 #contatos .botao-contato img {
@@ -409,7 +409,7 @@ footer figure img {
     display: flex;
     border-radius: 50%;
     transition: all ease-in-out 0.3s;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 #contatos .botao-contato button:hover {

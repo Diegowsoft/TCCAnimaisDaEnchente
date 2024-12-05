@@ -21,7 +21,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--branco);
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 h1 {
@@ -65,7 +65,7 @@ textarea {
     margin-bottom: 8px;
     background-color: var(--branco);
     text-align: left;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 .botoes {
@@ -102,7 +102,7 @@ button {
 
 button:hover {
     background-color: #a996c7;
-    cursor: url('../img/cursopata.png'), auto;
+    cursor: url('../img/cursor_branco.png'), auto;
 }
 
 /* Quebra de linha para dispositivos extra pequenos (0-480px) */
