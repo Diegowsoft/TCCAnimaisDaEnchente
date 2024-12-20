@@ -41,7 +41,7 @@ Acesse o link: [SyncVision - TCC Animais da Enchente](https://syncvisionconsulto
 
 - **LinkedIn:**
 
-- Diego Fagundes: linkedin.com/in/diegowsoft
+- Diego Fagundes: https://linkedin.com/in/diegowsoft
 - Leticia Macedo: https://www.linkedin.com/in/let%C3%ADcia-santos-de-macedo-562814218/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
 - Guilherme Felippe: https://www.linkedin.com/in/guilherme-felippe-7a5610296/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
 - Gabriel Barros: https://www.linkedin.com/in/gabriel-barros-da-silva-a8554b306/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
